@@ -1,0 +1,15 @@
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.csprojAssemblyReference.cache
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WPFScheduler.exe.config
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WPFScheduler.exe
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WPFScheduler.pdb
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\MainWindow.g.cs
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\App.g.cs
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler_MarkupCompile.cache
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler_MarkupCompile.lref
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\MainWindow.baml
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.g.resources
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.Properties.Resources.resources
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.csproj.GenerateResource.cache
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.csproj.CoreCompileInputs.cache
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.exe
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\WPFScheduler.pdb
