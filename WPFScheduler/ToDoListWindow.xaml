@@ -1,0 +1,57 @@
+﻿<Window x:Class="WPFScheduler.ToDoListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFScheduler"
+        mc:Ignorable="d"
+        Title="ToDoListWindow" Height="600" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="To Do List"
+                   Grid.ColumnSpan="3" FontSize="42"
+                   />
+        
+        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                  Margin="0,20,0,0" Name="tasksToDoListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Task" Width="180"
+                                    DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Type" Width="80"
+                                    DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Header="Deadline" Width="150"
+                                    DisplayMemberBinding="{Binding Deadline}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <Button x:Name="backButton" Height="30" Width="100"
+                Grid.Column="1" Grid.Row="4" Content="Back"
+                Click="backButton_Click"/>
+
+        <Button x:Name="removeButton" Height="30" Width="100"
+                Grid.Column="2" Grid.Row="4" Content="Remove"
+                Click="removeButton_Click"/>
+
+        <Button x:Name="addButton" Height="30" Width="100"
+                Grid.Column="3" Grid.Row="4" Content="Add"
+                Click="addButton_Click"/>
+    </Grid>
+</Window>

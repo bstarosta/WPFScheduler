@@ -5,12 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFScheduler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        Title="Planer" Height="450" Width="800">
+    <UniformGrid Columns="3">
+        <Button x:Name="calendarButton" BorderBrush="Black"
+                BorderThickness="3" Click="calendarButton_Click">
+            <Image Source="Images/calendar.png" Stretch="Fill"
+                   Cursor="Hand"/>
+        </Button>
+        
+        <Button x:Name="toDoListButton" BorderBrush="Black"
+                BorderThickness="3" Click="toDoListButton_Click"
+                Cursor="Hand">
+            <Image Source="Images/todolist.jpg" Stretch="Fill"/>
+        </Button>
 
-    </Grid>
+        <Button x:Name="weatherButton" BorderBrush="Black" 
+                BorderThickness="3" Click="weatherButton_Click"
+                Cursor="Hand">
+            <Image Source="Images/weather.jpg" Stretch="Fill"/>
+        </Button>
+    </UniformGrid>
+    
 </Window>

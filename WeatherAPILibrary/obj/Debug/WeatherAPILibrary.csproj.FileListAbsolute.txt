@@ -1,0 +1,11 @@
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\WeatherAPILibrary.dll
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\WeatherAPILibrary.pdb
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.csprojAssemblyReference.cache
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.csproj.CoreCompileInputs.cache
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.csproj.CopyComplete
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.dll
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.pdb

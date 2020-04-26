@@ -4,6 +4,17 @@
     "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFSchedulerTests\\WPFSchedulerTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj",
+        "projectName": "WeatherAPILibrary",
+        "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFSchedulerTests\\WPFSchedulerTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,6 +41,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj": {
+                "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj"
+              },
               "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFScheduler\\WPFScheduler.csproj": {
                 "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFScheduler\\WPFScheduler.csproj"
               }
@@ -45,6 +59,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.4.0, )"
@@ -52,6 +74,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.15.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "nunit": {
               "target": "Package",
@@ -82,7 +108,16 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFScheduler\\WPFScheduler.csproj",
         "projectName": "WPFScheduler",
-        "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFScheduler\\WPFScheduler.csproj"
+        "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WPFScheduler\\WPFScheduler.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj": {
+                "projectPath": "C:\\Users\\Joanna\\Documents\\WPFScheduler\\WeatherAPILibrary\\WeatherAPILibrary.csproj"
+              }
+            }
+          }
+        }
       },
       "frameworks": {
         "net48": {}

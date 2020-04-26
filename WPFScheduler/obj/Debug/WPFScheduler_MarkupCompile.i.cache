@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\App.xaml
-11151548125
+7-583903460
 
-9444250590
-151999995117
-MainWindow.xaml;
+231415171050
+241714054344
+AddTaskToDoWindow.xaml;CalendarWindow.xaml;ChooseCity.xaml;DateViewWindow.xaml;MainWindow.xaml;ToDoListWindow.xaml;WeatherWindow.xaml;
 
 True
 

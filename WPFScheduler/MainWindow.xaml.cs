@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WeatherAPILibrary;
+using WPFScheduler.Database;
 
 namespace WPFScheduler
 {
@@ -22,7 +24,36 @@ namespace WPFScheduler
     {
         public MainWindow()
         {
+            using (var context = new SchedulerDbContext())
+            {
+                context.Database.CreateIfNotExists();
+                ApplicationDatabaseData.Events = context.Events.ToList();
+                ApplicationDatabaseData.TasksToDo = context.TasksToDo.ToList();
+            }
             InitializeComponent();
+            WeatherAPIHelper.InitializeClient();
+
+        }
+
+
+        private void weatherButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseCity chooseCity = new ChooseCity();
+            chooseCity.Show();
+        }
+
+        private void toDoListButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToDoListWindow taskToDoWindow = new ToDoListWindow();
+            taskToDoWindow.Show();
+            this.Close();
+        }
+
+        private void calendarButton_Click(object sender, RoutedEventArgs e)
+        {
+            CalendarWindow calendarWindow = new CalendarWindow();
+            calendarWindow.Show();
+            this.Close();
         }
     }
 }
