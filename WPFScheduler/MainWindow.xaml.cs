@@ -24,15 +24,9 @@ namespace WPFScheduler
     {
         public MainWindow()
         {
-            using (var context = new SchedulerDbContext())
-            {
-                context.Database.CreateIfNotExists();
-                ApplicationDatabaseData.Events = context.Events.ToList();
-                ApplicationDatabaseData.TasksToDo = context.TasksToDo.ToList();
-            }
             InitializeComponent();
+            ApplicationDatabaseData.LoadDataFromDatabase();
             WeatherAPIHelper.InitializeClient();
-
         }
 
 
@@ -46,14 +40,12 @@ namespace WPFScheduler
         {
             ToDoListWindow taskToDoWindow = new ToDoListWindow();
             taskToDoWindow.Show();
-            this.Close();
         }
 
         private void calendarButton_Click(object sender, RoutedEventArgs e)
         {
             CalendarWindow calendarWindow = new CalendarWindow();
             calendarWindow.Show();
-            this.Close();
         }
     }
 }

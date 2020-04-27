@@ -51,13 +51,13 @@
                     Grid.Column="1" Margin="8"
                     Grid.ColumnSpan="2">
             <TextBlock Text="Deadline: " FontSize="20"/>
-            <TextBox x:Name="taskDeadlineYear" Width="30" 
+            <TextBox x:Name="taskDeadlineDay" Width="30" 
                      Height="30" FontSize="16"/>
             <TextBlock Text="-" FontSize="20"/>
             <TextBox x:Name="taskDeadlineMonth" Width="30" 
                      Height="30" FontSize="16"/>
             <TextBlock Text="-" FontSize="20"/>
-            <TextBox x:Name="taskDeadlineDay" Width="50" 
+            <TextBox x:Name="taskDeadlineYear" Width="50" 
                      Height="30" FontSize="16"/>
             <TextBox x:Name="taskDeadlineHour" Width="30" 
                      Height="30" Margin="20,0,0,0"

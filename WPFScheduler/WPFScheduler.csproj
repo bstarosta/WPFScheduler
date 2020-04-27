@@ -101,6 +101,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddEventWindow.xaml.cs">
+      <DependentUpon>AddEventWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddTaskToDoWindow.xaml.cs">
       <DependentUpon>AddTaskToDoWindow.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
     <Compile Include="WeatherWindow.xaml.cs">
       <DependentUpon>WeatherWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddEventWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddTaskToDoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

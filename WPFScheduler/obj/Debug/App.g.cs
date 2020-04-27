@@ -30,6 +30,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using WPFScheduler;
+using WPFScheduler.Database;
+using WeatherAPILibrary;
+using System.Linq;
 
 
 namespace WPFScheduler {

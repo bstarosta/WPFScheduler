@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFScheduler"
         mc:Ignorable="d"
-        Title="DateViewWindow" Height="450" Width="800">
+        Title="Events" Height="450" Width="400">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1"
+                   Text="Events" FontSize="40" Margin="0,0,0,20"/>
         
+        <ListView x:Name="eventsListView" Grid.Row="2"
+                  Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Event" Width="200"
+                                    DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Grid.Column="3" Orientation="Vertical">
+            <Button x:Name="addButton" Height="30" Width="100"
+                    Content="Add" Margin="10,20"
+                    Click="addButton_Click"/>
+            <Button x:Name="removeButton" Height="30" Width="100"
+                    Content="Remove" Margin="10,20"
+                    Click="removeButton_Click"/>
+            <Button x:Name="detailsButton" Height="30" Width="100"
+                    Content="Details" Margin="10,20"
+                    Click="detailsButton_Click"/>
+            <Button x:Name="backButton" Height="30" Width="100"
+                    Content="Back" Margin="10,20"
+                    Click="backButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

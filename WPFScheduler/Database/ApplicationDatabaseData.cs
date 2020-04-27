@@ -10,5 +10,14 @@ namespace WPFScheduler.Database
     {
         public static List<Event> Events { get; set; }
         public static List<TaskToDo> TasksToDo { get; set; }
+
+        public static void LoadDataFromDatabase()
+        {
+            using(var context =new SchedulerDbContext())
+            {
+                Events = context.Events.ToList();
+                TasksToDo = context.TasksToDo.ToList();
+            }
+        }
     }
 }

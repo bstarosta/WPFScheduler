@@ -55,3 +55,5 @@ C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\CalendarWindow.g.c
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\CalendarWindow.baml
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\DateViewWindow.g.cs
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\DateViewWindow.baml
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\AddEventWindow.g.cs
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\AddEventWindow.baml

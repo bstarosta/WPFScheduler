@@ -30,7 +30,7 @@ namespace WPFScheduler
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            string dateString = $"{taskDeadlineDay.Text}/{taskDeadlineMonth.Text}/{taskDeadlineYear.Text} {taskDeadlineHour.Text}:{taskDeadlineMinute.Text}";
+            string dateString = $"{taskDeadlineYear.Text}/{taskDeadlineMonth.Text}/{taskDeadlineDay.Text} {taskDeadlineHour.Text}:{taskDeadlineMinute.Text}";
             try
             {
                 if (string.IsNullOrEmpty(taskName.Text))
