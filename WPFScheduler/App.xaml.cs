@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WeatherAPILibrary;
+using WPFScheduler.Database;
 
 namespace WPFScheduler
 {
@@ -13,5 +15,10 @@ namespace WPFScheduler
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            ApplicationDatabaseData.LoadDataFromDatabase();
+            WeatherAPIHelper.InitializeClient();
+        }
     }
 }

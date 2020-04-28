@@ -45,8 +45,8 @@
                     Orientation="Horizontal"
                     Margin="0,10">
             <TextBlock Text="Event type: " FontSize="20"/>
-            <TextBox x:Name="eventType" Width="190"
-                     />
+            <ComboBox Name="eventType" Width="120" Height="25"
+                      IsSynchronizedWithCurrentItem="True"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Grid.Column="1"

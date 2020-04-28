@@ -25,7 +25,8 @@ namespace WPFScheduler
             InitializeComponent();
             date = selectedDate;
             events = ApplicationDatabaseData.Events.Where(x => x.Start.Date == selectedDate.Date).ToList();
-            eventsListView.ItemsSource = events;          
+            eventsListView.ItemsSource = events;
+            eventsListView.SelectedItems.Clear();
         }
 
         private List<Event> events;
@@ -33,26 +34,45 @@ namespace WPFScheduler
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
+            CalendarWindow calendarWindow = new CalendarWindow();
+            calendarWindow.Show();
             this.Close();
         }
 
         private void detailsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                if (eventsListView.SelectedItems.Count == 0)
+                    throw new ArgumentNullException();
+                EventDetailsWindow eventDetailsWindow = new EventDetailsWindow((Event)eventsListView.SelectedItem);
+                eventDetailsWindow.Show();
+            }
+            catch(ArgumentNullException)
+            {
+                MessageBox.Show("Select an event");
+            }
         }
 
         private void removeButton_Click(object sender, RoutedEventArgs e)
         {
-            Event ev = (Event)eventsListView.SelectedItem;
-            ApplicationDatabaseData.Events.Remove(ev);
-            events.Remove(ev);
-            using (var context = new SchedulerDbContext())
-            {  
-                context.Events.Attach(ev);
-                context.Events.Remove(ev);
-                context.SaveChanges();          
+            try
+            {
+                Event ev = (Event)eventsListView.SelectedItem;
+                ApplicationDatabaseData.Events.Remove(ev);
+                events.Remove(ev);
+                using (var context = new SchedulerDbContext())
+                {
+                    context.Events.Attach(ev);
+                    context.Events.Remove(ev);
+                    context.SaveChanges();
+                }
+                eventsListView.Items.Refresh();
             }
-            eventsListView.Items.Refresh();
+            catch(ArgumentNullException)
+            {
+                MessageBox.Show("Select an event to remove");
+            }
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)

@@ -120,6 +120,9 @@
     <Compile Include="DateViewWindow.xaml.cs">
       <DependentUpon>DateViewWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EventDetailsWindow.xaml.cs">
+      <DependentUpon>EventDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202004191146315_EvenTableUpdate.cs" />
     <Compile Include="Migrations\202004191146315_EvenTableUpdate.designer.cs">
       <DependentUpon>202004191146315_EvenTableUpdate.cs</DependentUpon>
@@ -133,6 +136,7 @@
       <DependentUpon>202004241606577_UpdateTasksToDo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Support\DateTimeHelper.cs" />
     <Compile Include="ToDoListWindow.xaml.cs">
       <DependentUpon>ToDoListWindow.xaml</DependentUpon>
     </Compile>
@@ -156,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DateViewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventDetailsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -252,9 +260,7 @@
   <ItemGroup>
     <Resource Include="Images\orangebg.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Support\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -24,9 +24,11 @@ namespace WPFScheduler
         public AddEventWindow(DateTime date)
         {
             InitializeComponent();
+            eventType.ItemsSource = eventTypes;
             eventDate = date;
         }
 
+        List<string> eventTypes =new List<string>() {"Meeting", "Party", "Travel", "Cultural", "Other" };
         private DateTime eventDate;
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
@@ -39,11 +41,11 @@ namespace WPFScheduler
             try
             {
                 checkForEmptyFields();
-                DateTime startDate = addTimeToDate(eventDate, startHour.Text, startMinute.Text);
-                DateTime endDate = addTimeToDate(eventDate, endHour.Text, endMinute.Text);
+                DateTime startDate = DateTimeHelper.addTimeToDate(eventDate, startHour.Text, startMinute.Text);
+                DateTime endDate = DateTimeHelper.addTimeToDate(eventDate, endHour.Text, endMinute.Text);
                 if (DateTime.Compare(startDate, endDate) > 0)
                     throw new FormatException("An event can't end before it starts");
-                Event ev = new Event(startDate, endDate, eventName.Text, eventType.Text, eventDescription.Text);
+                Event ev = new Event(startDate, endDate, eventName.Text, eventType.SelectedItem.ToString(), eventDescription.Text);
                 ApplicationDatabaseData.Events.Add(ev);
                 using (var context = new SchedulerDbContext())
                 {
@@ -65,27 +67,16 @@ namespace WPFScheduler
 
         private void checkForEmptyFields()
         {
-            if (string.IsNullOrEmpty(eventName.Text))
+            if (string.IsNullOrWhiteSpace(eventName.Text))
                 throw new MissingFieldException();
-            if (string.IsNullOrEmpty(eventType.Text))
+            if (string.IsNullOrWhiteSpace(startHour.Text))
                 throw new MissingFieldException();
-            if (string.IsNullOrEmpty(startHour.Text))
+            if (string.IsNullOrWhiteSpace(startMinute.Text))
                 throw new MissingFieldException();
-            if (string.IsNullOrEmpty(startMinute.Text))
+            if (string.IsNullOrWhiteSpace(endHour.Text))
                 throw new MissingFieldException();
-            if (string.IsNullOrEmpty(endHour.Text))
+            if (string.IsNullOrWhiteSpace(endMinute.Text))
                 throw new MissingFieldException();
-            if (string.IsNullOrEmpty(endMinute.Text))
-                throw new MissingFieldException();
-            if (string.IsNullOrEmpty(eventDescription.Text))
-                throw new MissingFieldException();
-        }
-
-        private DateTime addTimeToDate(DateTime date, string hours, string minutes)
-        {
-            CultureInfo culture = new CultureInfo("pl-PL");
-            string dateString = $"{date:yyyy/MM/dd} {hours}:{minutes}";
-            return Convert.ToDateTime(dateString, culture);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

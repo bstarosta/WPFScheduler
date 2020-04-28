@@ -25,8 +25,6 @@ namespace WPFScheduler
         public MainWindow()
         {
             InitializeComponent();
-            ApplicationDatabaseData.LoadDataFromDatabase();
-            WeatherAPIHelper.InitializeClient();
         }
 
 

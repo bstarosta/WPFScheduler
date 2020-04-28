@@ -9,16 +9,16 @@ namespace WeatherAPILibrary
 {
     public class WeatherProcessor
     {
-        public static WeatherAPIResponse GetWeather(string cityName)
+        public static async Task<WeatherAPIResponse> GetWeather(string cityName)
         {
 
             string url = $"weather?q={cityName}&units=metric&appid=2ab8da9038bfa89ee9cbf1750cf81907";
 
-            using (HttpResponseMessage response = WeatherAPIHelper.WeatherAPIClient.GetAsync(url).GetAwaiter().GetResult())
+            using (HttpResponseMessage response = await WeatherAPIHelper.WeatherAPIClient.GetAsync(url))
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    WeatherAPIResponse weather =response.Content.ReadAsAsync<WeatherAPIResponse>().GetAwaiter().GetResult();
+                    WeatherAPIResponse weather = await response.Content.ReadAsAsync<WeatherAPIResponse>();
                     return weather;
                 }
                 else

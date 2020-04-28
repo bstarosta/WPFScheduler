@@ -25,6 +25,12 @@
             <Calendar x:Name="eventCalendar" 
                       Language="English"
                       SelectedDatesChanged="eventCalendar_SelectedDatesChanged">
+                <Calendar.CalendarDayButtonStyle>
+                    <Style TargetType="CalendarDayButton"
+                           BasedOn="{StaticResource {x:Type CalendarDayButton}}">
+                        <EventSetter Event="Loaded" Handler="CalendarDayButton_Loaded"/>
+                    </Style>
+                </Calendar.CalendarDayButtonStyle>
             </Calendar>
         </Viewbox>
 

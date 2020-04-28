@@ -41,12 +41,19 @@ namespace WPFScheduler
 
         private void removeButton_Click(object sender, RoutedEventArgs e)
         {
-            TaskToDo task =(TaskToDo)tasksToDoListView.SelectedItem;
-            ApplicationDatabaseData.TasksToDo.Remove(task);
-            context.TasksToDo.Attach(task);
-            context.TasksToDo.Remove(task);
-            context.SaveChanges();
-            tasksToDoListView.Items.Refresh();
+            try
+            {
+                TaskToDo task = (TaskToDo)tasksToDoListView.SelectedItem;
+                ApplicationDatabaseData.TasksToDo.Remove(task);
+                context.TasksToDo.Attach(task);
+                context.TasksToDo.Remove(task);
+                context.SaveChanges();
+                tasksToDoListView.Items.Refresh();
+            }
+            catch(ArgumentNullException)
+            {
+                MessageBox.Show("Select a task to remove");
+            }
         }
     }
 }

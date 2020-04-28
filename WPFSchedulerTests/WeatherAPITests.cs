@@ -14,11 +14,11 @@ namespace WPFSchedulerTests
     public class WeatherAPITests
     {
         [Test]
-        public void ShouldContainCorrectData()
+        public async void ShouldContainCorrectData()
         {
             string cityName = "Wrocław";
             WeatherAPIHelper.InitializeClient();
-            WeatherAPIResponse response = WeatherProcessor.GetWeather(cityName);
+            WeatherAPIResponse response =await WeatherProcessor.GetWeather(cityName);
             Assert.AreEqual(cityName, response.Name);
         }
     }

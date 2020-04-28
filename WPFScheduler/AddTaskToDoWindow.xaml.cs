@@ -33,7 +33,7 @@ namespace WPFScheduler
             string dateString = $"{taskDeadlineYear.Text}/{taskDeadlineMonth.Text}/{taskDeadlineDay.Text} {taskDeadlineHour.Text}:{taskDeadlineMinute.Text}";
             try
             {
-                if (string.IsNullOrEmpty(taskName.Text))
+                if (string.IsNullOrWhiteSpace(taskName.Text))
                     throw new ArgumentNullException("Name your task");
                 DateTime deadline = Convert.ToDateTime(dateString, new CultureInfo("pl-PL"));
                 TaskToDo task = new TaskToDo(taskName.Text, taskType.SelectedItem.ToString(), deadline);

@@ -27,11 +27,11 @@ namespace WPFScheduler
             InitializeComponent();
         }
 
-        private void chooseCityButton_Click(object sender, RoutedEventArgs e)
+        private async void chooseCityButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                WeatherAPIResponse response = WeatherProcessor.GetWeather(cityName.Text);
+                WeatherAPIResponse response = await WeatherProcessor.GetWeather(cityName.Text);
                 WeatherWindow weatherWindow = new WeatherWindow(response);
                 weatherWindow.Show();
                 this.Close();
