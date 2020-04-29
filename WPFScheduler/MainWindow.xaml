@@ -9,7 +9,7 @@
     <UniformGrid Columns="3">
         <Button x:Name="calendarButton" BorderBrush="Black"
                 BorderThickness="3" Click="calendarButton_Click">
-            <Image Source="Images/calendar.png" Stretch="Fill"
+            <Image Source="Images/old.jpg" Stretch="Fill"
                    Cursor="Hand"/>
         </Button>
         

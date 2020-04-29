@@ -8,9 +8,15 @@ using WPFScheduler.Database;
 
 namespace WPFScheduler
 {
+    /// <summary>
+    /// Klasa umożliwiająca korzystanie z połączonej z aplikacją bazy danych
+    /// </summary>
     public class SchedulerDbContext : DbContext
     {
+        ///<value>Reprezentuje tabelę "Events" w bazie danych</value>
         public DbSet<Event> Events { get; set; }
+
+        ///<value>Reprezentuje tabelę "TasksToDo" w bazie danych</value>
         public DbSet<TaskToDo> TasksToDo { get; set; }
     }
 }

@@ -37,7 +37,7 @@
                     <GridViewColumn Header="Type" Width="80"
                                     DisplayMemberBinding="{Binding Type}"/>
                     <GridViewColumn Header="Deadline" Width="150"
-                                    DisplayMemberBinding="{Binding Deadline}"/>
+                                    DisplayMemberBinding="{Binding Deadline, StringFormat='dd-MMMM-yyyy HH:mm'}"/>
                 </GridView>
             </ListView.View>
         </ListView>

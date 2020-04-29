@@ -18,16 +18,26 @@ namespace WPFScheduler
 {
     /// <summary>
     /// Logika interakcji dla klasy AddTaskToDoWindow.xaml
+    /// W tym oknie użytkownik może wpisać dane swojego zadania do wykonania
+    /// oraz zapisać je na swojej liście
     /// </summary>
     public partial class AddTaskToDoWindow : Window
     {
         public AddTaskToDoWindow()
         {
             InitializeComponent();
-            List<string> types = new List<string> { "Home", "School", "Job", "Other" };
             taskType.ItemsSource = types;
         }
 
+        List<string> types = new List<string> { "Home", "School", "Job", "Other" };
+
+        /// <summary>
+        /// Funkcja wykonywana po kliknięciu przycisku "Save". Przetwarza wpisane przez użytkownika dane
+        /// do postaci, w której można z nich utworzyć obiekt <c>TaskToDo</c>, a następnie zapisuje
+        /// utworzony obiekt do danych lokalnych oraz do bazy danych. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             string dateString = $"{taskDeadlineYear.Text}/{taskDeadlineMonth.Text}/{taskDeadlineDay.Text} {taskDeadlineHour.Text}:{taskDeadlineMinute.Text}";
@@ -55,6 +65,12 @@ namespace WPFScheduler
             }
         }
 
+        /// <summary>
+        /// Funkcja wywoływana po kliknięciu przycisku "Cancel"
+        /// Zamyka okno dodawania zadań
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -18,9 +18,14 @@ namespace WPFScheduler
 {
     /// <summary>
     /// Logika interakcji dla klasy AddEventWindow.xaml
+    /// W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty
     /// </summary>
     public partial class AddEventWindow : Window
     {
+        /// <summary>
+        /// Konstruktor tworzący okno zawierające wydarzenia dla podanej daty
+        /// </summary>
+        /// <param name="date">Data wybrana przez użytkownika w kalendarzu</param>
         public AddEventWindow(DateTime date)
         {
             InitializeComponent();
@@ -28,14 +33,33 @@ namespace WPFScheduler
             eventDate = date;
         }
 
-        List<string> eventTypes =new List<string>() {"Meeting", "Party", "Travel", "Cultural", "Other" };
+        /// <value>Lista zawierająca typy wydarzeń</value>
+        List<string> eventTypes =new List<string>() {"Meeting", "Party", "Travel", "Cultural", "Business", "Other" };
+
+        /// <value>Data wydarzenia</value>
         private DateTime eventDate;
 
+        /// <summary>
+        /// Funkcja wywoływana po kliknięciu przycisku "Cancel"
+        /// Zamyka okno dodawnia wydarzeń
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Funkcja wywoływana po kliknięciu przycisku "Save"
+        /// Przetwarza wpisane przez użytkownika dane do postaci, w której
+        /// można z nich utworzyć obiekt <c>Event</c> a następnie zapisuje utworzony obiekt
+        /// do danych lokalnych oraz do bazy danych.
+        /// <remarks> W przypadku podania błędnych danych przez użytkownika wyświetla odpowiednie komunikaty
+        /// </remarks>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -46,12 +70,12 @@ namespace WPFScheduler
                 if (DateTime.Compare(startDate, endDate) > 0)
                     throw new FormatException("An event can't end before it starts");
                 Event ev = new Event(startDate, endDate, eventName.Text, eventType.SelectedItem.ToString(), eventDescription.Text);
-                ApplicationDatabaseData.Events.Add(ev);
                 using (var context = new SchedulerDbContext())
                 {
                     context.Events.Add(ev);
                     context.SaveChanges();
                 }
+                ApplicationDatabaseData.Events.Add(ev);
                 this.Close();
             }
             catch(MissingFieldException)
@@ -65,6 +89,11 @@ namespace WPFScheduler
             
         }
 
+        /// <summary>
+        /// Funkcja pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola
+        /// nie są puste.
+        /// <exception cref="MissingFieldException">Wyjątek rzucany w przypadku gdy wymagane pola są puste</exception>
+        /// </summary>
         private void checkForEmptyFields()
         {
             if (string.IsNullOrWhiteSpace(eventName.Text))
@@ -79,6 +108,12 @@ namespace WPFScheduler
                 throw new MissingFieldException();
         }
 
+        /// <summary>
+        /// Funkcja wywoływana podczas zamknięcia okna dodawania wydarzeń
+        /// Otwiera poprzednie okno
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             DateViewWindow dateViewWindow = new DateViewWindow(eventDate.Date);
