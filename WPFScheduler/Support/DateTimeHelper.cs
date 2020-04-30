@@ -22,7 +22,7 @@ namespace WPFScheduler
         /// <param name="date">Data do której ma zostać dodany czas dnia</param>
         /// <param name="hours">Godzina</param>
         /// <param name="minutes">Minuty</param>
-        /// <returns></returns>
+        /// <returns>Data i godzina utowrzona z podanych danych</returns>
         public static DateTime addTimeToDate(DateTime date, string hours, string minutes)
         {
             CultureInfo culture = new CultureInfo("pl-PL");

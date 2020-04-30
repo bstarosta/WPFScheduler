@@ -51,12 +51,10 @@ namespace WPFScheduler
         }
 
         /// <summary>
-        /// Funkcja wywoływana po kliknięciu przycisku "Save"
+        /// Metoda wywoływana po kliknięciu przycisku "Save"
         /// Przetwarza wpisane przez użytkownika dane do postaci, w której
         /// można z nich utworzyć obiekt <c>Event</c> a następnie zapisuje utworzony obiekt
         /// do danych lokalnych oraz do bazy danych.
-        /// <remarks> W przypadku podania błędnych danych przez użytkownika wyświetla odpowiednie komunikaty
-        /// </remarks>
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -70,12 +68,7 @@ namespace WPFScheduler
                 if (DateTime.Compare(startDate, endDate) > 0)
                     throw new FormatException("An event can't end before it starts");
                 Event ev = new Event(startDate, endDate, eventName.Text, eventType.SelectedItem.ToString(), eventDescription.Text);
-                using (var context = new SchedulerDbContext())
-                {
-                    context.Events.Add(ev);
-                    context.SaveChanges();
-                }
-                ApplicationDatabaseData.Events.Add(ev);
+                ApplicationDatabaseData.EventsAppData.Save(ev);
                 this.Close();
             }
             catch(MissingFieldException)
@@ -90,7 +83,7 @@ namespace WPFScheduler
         }
 
         /// <summary>
-        /// Funkcja pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola
+        /// Metoda pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola
         /// nie są puste.
         /// <exception cref="MissingFieldException">Wyjątek rzucany w przypadku gdy wymagane pola są puste</exception>
         /// </summary>
@@ -109,7 +102,7 @@ namespace WPFScheduler
         }
 
         /// <summary>
-        /// Funkcja wywoływana podczas zamknięcia okna dodawania wydarzeń
+        /// Metoda wywoływana podczas zamknięcia okna dodawania wydarzeń
         /// Otwiera poprzednie okno
         /// </summary>
         /// <param name="sender"></param>

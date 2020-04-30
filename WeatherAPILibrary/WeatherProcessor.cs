@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace WeatherAPILibrary
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za pobieranie danych z API pogodowego
+    /// </summary>
     public class WeatherProcessor
     {
+        /// <summary>
+        /// Metoda asynchroniczna pobierająca odpowiedź z API pogodowego
+        /// </summary>
+        /// <param name="cityName">Miasto, w którym ma zostać sprawdzona pogoda</param>
+        /// <returns>Obiekt zawierający dane o pogodzie w wybranym mieście</returns>
+        /// <exception cref="Exception">Wyjątek występujący w wypadku nieudanej komunikacji z API</exception>
         public static async Task<WeatherAPIResponse> GetWeather(string cityName)
         {
 

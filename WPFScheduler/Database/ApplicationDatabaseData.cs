@@ -8,36 +8,29 @@ using System.Threading.Tasks;
 namespace WPFScheduler.Database
 {
     /// <summary>
-    /// Klasa przechowująca lokalną kopię danych z bazy połączonej z aplikacją
+    /// Klasa przechowująca lokalne dane aplikacji
     /// </summary>
     public static class ApplicationDatabaseData
     {
-        /// <value>Lista przechowująca lokalne danych o wydarzeniach</value>
-        public static List<Event> Events { get; set; }
+        ///<value>Obiekt zarządzający danymi o wydarzeniach</value>
+        public static EventsData EventsAppData { get; private set; }
 
-        /// <value>Lista przechowująca lokalne danych o zadaniach do wykonania</value>
-        public static List<TaskToDo> TasksToDo { get; set; }
+        ///<value>Obiekt zarządzający danymi o zadaniach do wykonania</value>
+        public static TasksToDoData TasksToDoAppData { get; private set; }
 
-        /// <summary>
-        /// Metoda ładująca dane z bazy do aplikacji
-        /// </summary>
-        public static void LoadDataFromDatabase()
-        {
-            using(var context =new SchedulerDbContext())
-            {
-                Events = context.Events.ToList();
-                TasksToDo = context.TasksToDo.ToList();
-            }
-        }
 
         /// <summary>
-        /// Metoda tworząca nową baze danych współpracującą z aplikacją, jeżeli taka
-        /// jeszcze nie istnieje
+        /// Metoda dane aplikacji. Tworzy nową bazę danych, jeżeli taka jeszcze nie istnieje
+        /// i pobiera dane z bazy do aplikacji
         /// </summary>
-        public static void InitializeDatabase()
+        public static void InitializeData()
         {
             using (var context = new SchedulerDbContext())
                 context.Database.CreateIfNotExists();
+            EventsAppData = new EventsData();
+            TasksToDoAppData = new TasksToDoData();
+            EventsAppData.LoadDataFromDatabase();
+            TasksToDoAppData.LoadDataFromDatabase();
         }
     }
 }

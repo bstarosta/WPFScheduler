@@ -17,6 +17,7 @@ namespace WPFScheduler
 {
     /// <summary>
     /// Logika interakcji dla klasy WeatherWindow.xaml
+    /// W tym oknie wyświetlane są informaje o pogodzie w wybranym mieście
     /// </summary>
     public partial class WeatherWindow : Window
     {
@@ -27,6 +28,10 @@ namespace WPFScheduler
             LoadImage(response.Weather[0].Icon);
         }
 
+        /// <summary>
+        /// Metoda ładująca obrazek odzwierciedlający pogodę w danym mieście
+        /// </summary>
+        /// <param name="imageCode">Kod obrazka otrzymany w odpowiedzi z API pogodowego</param>
         private void LoadImage(string imageCode)
         {
             string source = $"http://openweathermap.org/img/wn/{imageCode}@2x.png";
@@ -34,11 +39,23 @@ namespace WPFScheduler
             weatherIcon.Source = new BitmapImage(uriSource);
         }
 
+        /// <summary>
+        /// Metoda wywoływana po kliknięciu przycisku "Close"
+        /// Zamyka okno danych pogodowych
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Metoda wywoływana po kliknięciu przycisku "Different City"
+        /// Wyświetla okno wyboru miasta i zamyka okno danych pogodowych
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void anotherCityButton_Click(object sender, RoutedEventArgs e)
         {
             ChooseCity chooseCity = new ChooseCity();

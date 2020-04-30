@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WPFScheduler</name>
+    </assembly>
+    <members>
+        <member name="T:WPFScheduler.AddEventWindow">
+            <summary>
+            Logika interakcji dla klasy AddEventWindow.xaml
+            W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty
+            </summary>
+            <summary>
+            AddEventWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.#ctor(System.DateTime)">
+            <summary>
+            Konstruktor tworzący okno zawierające wydarzenia dla podanej daty
+            </summary>
+            <param name="date">Data wybrana przez użytkownika w kalendarzu</param>
+        </member>
+        <member name="F:WPFScheduler.AddEventWindow.eventTypes">
+            <value>Lista zawierająca typy wydarzeń</value>
+        </member>
+        <member name="F:WPFScheduler.AddEventWindow.eventDate">
+            <value>Data wydarzenia</value>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Funkcja wywoływana po kliknięciu przycisku "Cancel"
+            Zamyka okno dodawnia wydarzeń
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.saveButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Save"
+            Przetwarza wpisane przez użytkownika dane do postaci, w której
+            można z nich utworzyć obiekt <c>Event</c> a następnie zapisuje utworzony obiekt
+            do danych lokalnych oraz do bazy danych.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.checkForEmptyFields">
+            <summary>
+            Metoda pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola
+            nie są puste.
+            <exception cref="T:System.MissingFieldException">Wyjątek rzucany w przypadku gdy wymagane pola są puste</exception>
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Metoda wywoływana podczas zamknięcia okna dodawania wydarzeń
+            Otwiera poprzednie okno
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.AddEventWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.AddTaskToDoWindow">
+            <summary>
+            Logika interakcji dla klasy AddTaskToDoWindow.xaml
+            W tym oknie użytkownik może wpisać dane swojego zadania do wykonania
+            oraz zapisać je na swojej liście
+            </summary>
+            <summary>
+            AddTaskToDoWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.AddTaskToDoWindow.#ctor">
+            <summary>
+            Konstruktor tworzący okno dodawana zadań do wykonania
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.AddTaskToDoWindow.saveButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wykonywana po kliknięciu przycisku "Save". Przetwarza wpisane przez użytkownika dane
+            do postaci, w której można z nich utworzyć obiekt <c>TaskToDo</c>, a następnie zapisuje
+            utworzony obiekt do danych lokalnych oraz do bazy danych. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.AddTaskToDoWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Cancel"
+            Zamyka okno dodawania zadań
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.AddTaskToDoWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.CalendarWindow">
+            <summary>
+            Logika interakcji dla klasy CalendarWindow.xaml
+            W tym oknie użytkownik ma dostęp do kalendarza, z którego może
+            wybrać datę, aby przejrzeć przypisane do niej wydarzenia
+            </summary>
+            <summary>
+            CalendarWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.#ctor">
+            <summary>
+            Konstruktor tworzący okno kalendarza
+            </summary>
+        </member>
+        <member name="F:WPFScheduler.CalendarWindow.eventDates">
+            <value> Lista dat, do któtych przypisane są wydarzenia </value>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.backButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po wciśnięciu klawisza "Back"
+            Zamyka okno kalendarza
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.selectButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po wciśnięciu klawisza "Select"
+            Otwiera okno przeglądu wydarzeń dla wybranej daty oraz
+            zamyka okno kalendarza
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.eventCalendar_SelectedDatesChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Metoda pomocnicza resetująca focus myszki po wyborze daty w kalendarzu
+            </summary>
+            <remarks>
+            Wprowadzona aby nie było konieczności dwukrotnego klikania przycisków po
+            wyborze daty.
+            </remarks>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.CalendarDayButton_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po załadowaniu przycisków reprezentujących dni w kalendarzu
+            Wyróznia przyciski kalendarza, których daty znajdują się na liście
+            dat przypisanych do wydarzeń
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.highlightDay(System.Windows.Controls.Primitives.CalendarDayButton,System.DateTime)">
+            <summary>
+            Metoda pomocnicza, która zmienia tło przycisku kalendarza jeżeli przypisana do niego data
+            znajduje sie na liście dat przypisanych do wydarzeń
+            </summary>
+            <param name="button">Przycisk kalendarza</param>
+            <param name="date">Data przypisana do przycisku</param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.calendarButton_DataContextChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Metoda wywoływana po zmianie miesięcy w kontrolce kalendarza. Aktualizuje
+            przyciski kalendarza po zmianie miesiąca
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.CalendarWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.ChooseCity">
+            <summary>
+            Logika interakcji dla klasy ChooseCity.xaml
+            W tym oknie użytkownik wybiera miasto, dla którego chce sprawdzić pogodę
+            </summary>
+            <summary>
+            ChooseCity
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.ChooseCity.#ctor">
+            <summary>
+            Konstruktor tworzący okno wyboru miasta
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.ChooseCity.chooseCityButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda asynchroniczna wywoływana po kliknięciu przycisku "Next"
+            Pobiera informacje o pogodzie dla podanego miasta i tworzy
+            okno danych pogodowych wyświetlające dane otrzymane z API pogodowego
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.ChooseCity.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.Database.ApplicationDatabaseData">
+            <summary>
+            Klasa przechowująca lokalne dane aplikacji
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Database.ApplicationDatabaseData.EventsAppData">
+            <value>Obiekt zarządzający danymi o wydarzeniach</value>
+        </member>
+        <member name="P:WPFScheduler.Database.ApplicationDatabaseData.TasksToDoAppData">
+            <value>Obiekt zarządzający danymi o zadaniach do wykonania</value>
+        </member>
+        <member name="M:WPFScheduler.Database.ApplicationDatabaseData.InitializeData">
+            <summary>
+            Metoda dane aplikacji. Tworzy nową bazę danych, jeżeli taka jeszcze nie istnieje
+            i pobiera dane z bazy do aplikacji
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.Database.EventsData">
+            <summary>
+            Klasa zarządzająca danymi o wydarzeniach. Zawiera metody pozwalające
+            na zapisywanie i ususuwania danych o wydarzeniach.
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Database.EventsData.Events">
+            <value>Lista przechowująca lokalne dane o wydarzeniach</value>
+        </member>
+        <member name="M:WPFScheduler.Database.EventsData.LoadDataFromDatabase">
+            <summary>
+            Metoda ładująca dane o wydarzeniach z bazy do aplikacji
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.EventsData.Save(WPFScheduler.Event)">
+            <summary>
+            Metoda zapisująca dane o wydarzeniu do bazy danych oraz danych lokalnych
+            </summary>
+            <param name="ev">Wydarzenie do zapisania</param>
+        </member>
+        <member name="M:WPFScheduler.Database.EventsData.Remove(WPFScheduler.Event)">
+            <summary>
+            Metoda usuwająca dane do wydarzeniu z bazy danych i danych lokalnych aplikacji
+            </summary>
+            <param name="ev">Wydarzenie do usunięcia</param>
+        </member>
+        <member name="T:WPFScheduler.Database.TasksToDoData">
+            <summary>
+            Klasa zarządzająca danymi o zadaniach. Zawiera metody pozwalające
+            na zapisywanie i ususuwania danych o zadaniach do wykonania.
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Database.TasksToDoData.TasksToDo">
+            <value>Lista przechowująca lokalne dane o zadaniach do wykonania</value>
+        </member>
+        <member name="M:WPFScheduler.Database.TasksToDoData.LoadDataFromDatabase">
+            <summary>
+            Metoda ładująca dane o zadaniach do wykonania z bazy do aplikacji
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.TasksToDoData.Save(WPFScheduler.Database.TaskToDo)">
+            <summary>
+            Metoda zapisująca dane o zadaniu do bazy danych oraz danych lokalnych
+            </summary>
+            <param name="taskToDo">Zadanie do zapisania</param>
+        </member>
+        <member name="M:WPFScheduler.Database.TasksToDoData.Remove(WPFScheduler.Database.TaskToDo)">
+            <summary>
+            Metoda usuwająca dane o zadaniu do wykonania z bazy danych oraz danych lokalnych
+            </summary>
+            <param name="taskToDo">Zadanie do usunięcia</param>
+        </member>
+        <member name="T:WPFScheduler.Database.TaskToDo">
+            <summary>
+            Klasa modelująca zadanie do wykonania. Zawiera nazwę zadania, jego typ
+            oraz termin, do którego dane zadanie musi zostać wykonane.
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.TaskToDo.#ctor">
+            <summary>
+            Konstruktor bezparametryczny
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.TaskToDo.#ctor(System.String,System.String,System.DateTime)">
+            <summary>
+            Konstruktor tworzący obiekty na podstawie danych podanych jako argumenty
+            </summary>
+            <param name="name">Nazwa zadania</param>
+            <param name="type">Typ zadania</param>
+            <param name="deadline">Termin wykonania zadania</param>
+        </member>
+        <member name="P:WPFScheduler.Database.TaskToDo.TaskToDoID">
+            <value>Identyfikator zadania generowany przez bazę danych</value>
+        </member>
+        <member name="P:WPFScheduler.Database.TaskToDo.Name">
+            <value>Nazwa zadania</value>
+        </member>
+        <member name="P:WPFScheduler.Database.TaskToDo.Deadline">
+            <value>Termin</value>
+        </member>
+        <member name="P:WPFScheduler.Database.TaskToDo.Type">
+            <value>Typ zadania</value>
+        </member>
+        <member name="T:WPFScheduler.Event">
+            <summary>
+            Klasa modelująca wydarzenie do zarejestrowania w kalendarzu. Zawiera nazwę wydarzenia,
+            jego typ, informację o ramach czasowych oraz opis. 
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Event.#ctor">
+            <summary>
+            Konstruktor bezparametryczny
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Event.#ctor(System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Konstruktor tworzący obiekty na podstawie danych podanych jako argumenty
+            </summary>
+            <param name="start">Czas startu wydarzenia</param>
+            <param name="end">Czas zakończenia wydarzenia</param>
+            <param name="name">Nazwa wydarzenia</param>
+            <param name="type">Typ wydarzenia</param>
+            <param name="description">Opis wydarzenia</param>
+        </member>
+        <member name="P:WPFScheduler.Event.EventID">
+            <value>Identyfikator wydarzenia generowany przez bazę danych</value>
+        </member>
+        <member name="P:WPFScheduler.Event.Start">
+            <value>Czas startu wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Event.End">
+            <value>Czas zakończenia wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Event.Name">
+            <value>Nazwa wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Event.Type">
+            <value>Typ wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Event.Description">
+            <value>Opis wydarzenia</value>
+        </member>
+        <member name="T:WPFScheduler.SchedulerDbContext">
+            <summary>
+            Klasa umożliwiająca korzystanie z połączonej z aplikacją bazy danych
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.SchedulerDbContext.Events">
+            <value>Reprezentuje tabelę "Events" w bazie danych</value>
+        </member>
+        <member name="P:WPFScheduler.SchedulerDbContext.TasksToDo">
+            <value>Reprezentuje tabelę "TasksToDo" w bazie danych</value>
+        </member>
+        <member name="T:WPFScheduler.DateViewWindow">
+            <summary>
+            Logika interakcji dla klasy DateViewWindow.xaml
+            W tym oknie użytkownik może zarządzać listą wydarzeń dla wybranej daty
+            </summary>
+            <summary>
+            DateViewWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.#ctor(System.DateTime)">
+            <summary>
+            Konstruktor tworzący okno przeglądu wydarzeń dla danej daty
+            </summary>
+            <param name="selectedDate">Dara wybrana w kalendarzu</param>
+        </member>
+        <member name="F:WPFScheduler.DateViewWindow.events">
+            <value> Lista wydarzeń przypisanych do danej daty </value>
+        </member>
+        <member name="F:WPFScheduler.DateViewWindow.date">
+            <value> Data dla jakiej wyświetlana jest lista wydarzeń </value>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.backButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po wciśnięciu przycisku "Back"
+            Zamyka okno przeglądu wydarzeń i otwiera okno kalendarza
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.detailsButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Details"
+            Otwiera okno szczegółowych informacji o wydarzeniu.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.removeButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Remove"
+            Usuwa wybrane wydarzenie z listy
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.addButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Add"
+            Otwiera okno dodawania wydarzeń oraz zamyka okno przeglądu wydarzeń
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.DateViewWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.EventDetailsWindow">
+            <summary>
+            Logika interakcji dla klasy EventDetailsWindow.xaml
+            W tym oknie użytkownik ma dostęp do szczegółowych informacji
+            o wybranym wydarzeniu
+            </summary>
+            <summary>
+            EventDetailsWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.EventDetailsWindow.#ctor(WPFScheduler.Event)">
+            <summary>
+            Konstruktor tworzący okno szczegółowych informacji o wydarzeniu
+            wybranym z listy
+            </summary>
+            <param name="ev">Wydarzenie wybrane z listy</param>
+        </member>
+        <member name="M:WPFScheduler.EventDetailsWindow.closeButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po wcisnięciu przycisku "Close"
+            Zamyka okno szczegółowych informacji o wydarzeniu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.EventDetailsWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.DateTimeHelper">
+            <summary>
+            Klasa zawierająca metody przydatne przy obsłudze obiektów typu <c>DateTime</c>
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.DateTimeHelper.addTimeToDate(System.DateTime,System.String,System.String)">
+            <summary>
+            Metoda umożliwiająca dodanie do podanej daty czasu dnia w postaci
+            godzin i minut zapisanych w formie tekstowej. Pomocna przy parsowaniu danych
+            wprowadzonych przez użytkownika do pól tekstowych, ponieważ użyta
+            tutaj metoda <c>Convert.ToDateTime</c> automatycznie załawia sprawę sprawdzenia formatu i zakresu
+            podanych danych.
+            </summary>
+            <param name="date">Data do której ma zostać dodany czas dnia</param>
+            <param name="hours">Godzina</param>
+            <param name="minutes">Minuty</param>
+            <returns>Data i godzina utowrzona z podanych danych</returns>
+        </member>
+        <member name="T:WPFScheduler.ToDoListWindow">
+            <summary>
+            Logika interakcji dla klasy ToDoListWindow.xaml
+            W tym oknie użytkownik może zarządzać listą zadań do wykonania
+            </summary>
+            <summary>
+            ToDoListWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.ToDoListWindow.#ctor">
+            <summary>
+            Konstruktor tworzący okno listy zadań do wykonania
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.ToDoListWindow.addButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Add"
+            Otwiera okno dodawania zadań do listy
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.ToDoListWindow.backButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Back"
+            Zamyka okno listy zadań do wykonania
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.ToDoListWindow.removeButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Remove"
+            Usuwa wybrane zadanie z listy
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.ToDoListWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.WeatherWindow">
+            <summary>
+            Logika interakcji dla klasy WeatherWindow.xaml
+            W tym oknie wyświetlane są informaje o pogodzie w wybranym mieście
+            </summary>
+            <summary>
+            WeatherWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.WeatherWindow.LoadImage(System.String)">
+            <summary>
+            Metoda ładująca obrazek odzwierciedlający pogodę w danym mieście
+            </summary>
+            <param name="imageCode">Kod obrazka otrzymany w odpowiedzi z API pogodowego</param>
+        </member>
+        <member name="M:WPFScheduler.WeatherWindow.closeButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Close"
+            Zamyka okno danych pogodowych
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.WeatherWindow.anotherCityButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku "Different City"
+            Wyświetla okno wyboru miasta i zamyka okno danych pogodowych
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.WeatherWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.App">
+            <summary>
+            Częsć klasy App zawierająca metodę wywoływaną przy starcie aplikacji
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.App.Application_Startup(System.Object,System.Windows.StartupEventArgs)">
+            <summary>
+            Metoda inicializująca dane aplikacji oraz klienta API pogodowego
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.MainWindow">
+            <summary>
+            Logika interakcji dla klasy MainWindow.xaml
+            Okno startowe aplikacji. Pozwala użytkownikowi przejść
+            do kalendarza wydarzeń, listy zadań do wykonania lub
+            informacji pogodowych
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.MainWindow.#ctor">
+            <summary>
+            Konstruktor tworzący okno startowe
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.MainWindow.weatherButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku prognozy pogody
+            Otwiera okno wyboru miasta
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.MainWindow.toDoListButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku listy zadań.
+            Otwiera okno listy zadań do wykonania
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.MainWindow.calendarButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po kliknięciu przycisku kalendarza
+            Otwiera okno kalendarza wydarzeń
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFScheduler.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFScheduler.Properties.Resources">
+            <summary>
+              Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Properties.Resources.ResourceManager">
+            <summary>
+              Zwraca buforowane wystąpienie składnika ResourceManager używane przez tę klasę.
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Properties.Resources.Culture">
+            <summary>
+              Przesłania właściwość CurrentUICulture bieżącego wątku dla wszystkich
+              przypadków przeszukiwania zasobów za pomocą tej silnie typizowanej klasy zasobów.
+            </summary>
+        </member>
+    </members>
+</doc>

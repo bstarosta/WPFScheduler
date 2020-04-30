@@ -14,7 +14,7 @@ namespace WPFSchedulerTests
     public class WeatherAPITests
     {
         [Test]
-        public async void ShouldContainCorrectData()
+        public async Task ShouldContainCorrectData()
         {
             string cityName = "Wrocław";
             WeatherAPIHelper.InitializeClient();

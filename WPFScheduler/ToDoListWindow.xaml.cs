@@ -17,16 +17,25 @@ namespace WPFScheduler
 {
     /// <summary>
     /// Logika interakcji dla klasy ToDoListWindow.xaml
+    /// W tym oknie użytkownik może zarządzać listą zadań do wykonania
     /// </summary>
     public partial class ToDoListWindow : Window
     {
-        private SchedulerDbContext context = new SchedulerDbContext();
+        /// <summary>
+        /// Konstruktor tworzący okno listy zadań do wykonania
+        /// </summary>
         public ToDoListWindow()
         {
             InitializeComponent();
-            tasksToDoListView.ItemsSource = ApplicationDatabaseData.TasksToDo;
+            tasksToDoListView.ItemsSource = ApplicationDatabaseData.TasksToDoAppData.TasksToDo;
         }
 
+        /// <summary>
+        /// Metoda wywoływana po kliknięciu przycisku "Add"
+        /// Otwiera okno dodawania zadań do listy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             AddTaskToDoWindow addTaskToDoWindow = new AddTaskToDoWindow();
@@ -34,20 +43,30 @@ namespace WPFScheduler
             tasksToDoListView.Items.Refresh();
         }
 
+        /// <summary>
+        /// Metoda wywoływana po kliknięciu przycisku "Back"
+        /// Zamyka okno listy zadań do wykonania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// Metoda wywoływana po kliknięciu przycisku "Remove"
+        /// Usuwa wybrane zadanie z listy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void removeButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 TaskToDo task = (TaskToDo)tasksToDoListView.SelectedItem;
-                ApplicationDatabaseData.TasksToDo.Remove(task);
-                context.TasksToDo.Attach(task);
-                context.TasksToDo.Remove(task);
-                context.SaveChanges();
+                ApplicationDatabaseData.TasksToDoAppData.Remove(task);
                 tasksToDoListView.Items.Refresh();
             }
             catch(ArgumentNullException)

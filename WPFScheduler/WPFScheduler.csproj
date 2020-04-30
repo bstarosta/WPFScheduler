@@ -41,7 +41,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>2</WarningLevel>
+    <DocumentationFile>bin\Debug\WPFScheduler.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -115,7 +116,9 @@
     </Compile>
     <Compile Include="Database\ApplicationDatabaseData.cs" />
     <Compile Include="Database\Event.cs" />
+    <Compile Include="Database\EventsData.cs" />
     <Compile Include="Database\SchedulerDbContext.cs" />
+    <Compile Include="Database\TasksToDoData.cs" />
     <Compile Include="Database\TaskToDo.cs" />
     <Compile Include="DateViewWindow.xaml.cs">
       <DependentUpon>DateViewWindow.xaml</DependentUpon>

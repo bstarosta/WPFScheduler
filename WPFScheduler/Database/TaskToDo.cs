@@ -19,6 +19,12 @@ namespace WPFScheduler.Database
         {
         }
 
+        /// <summary>
+        /// Konstruktor tworzący obiekty na podstawie danych podanych jako argumenty
+        /// </summary>
+        /// <param name="name">Nazwa zadania</param>
+        /// <param name="type">Typ zadania</param>
+        /// <param name="deadline">Termin wykonania zadania</param>
         public TaskToDo(string name, string type, DateTime deadline)
         {
             Name = name;

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeatherAPILibrary
 {
+    /// <summary>
+    /// Klasa modelująca odpowiedź API pogodowego
+    /// </summary>
     public class WeatherAPIResponse
     {
 

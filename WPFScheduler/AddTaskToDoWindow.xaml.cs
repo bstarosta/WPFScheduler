@@ -23,6 +23,9 @@ namespace WPFScheduler
     /// </summary>
     public partial class AddTaskToDoWindow : Window
     {
+        /// <summary>
+        /// Konstruktor tworzący okno dodawana zadań do wykonania
+        /// </summary>
         public AddTaskToDoWindow()
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace WPFScheduler
         List<string> types = new List<string> { "Home", "School", "Job", "Other" };
 
         /// <summary>
-        /// Funkcja wykonywana po kliknięciu przycisku "Save". Przetwarza wpisane przez użytkownika dane
+        /// Metoda wykonywana po kliknięciu przycisku "Save". Przetwarza wpisane przez użytkownika dane
         /// do postaci, w której można z nich utworzyć obiekt <c>TaskToDo</c>, a następnie zapisuje
         /// utworzony obiekt do danych lokalnych oraz do bazy danych. 
         /// </summary>
@@ -47,12 +50,7 @@ namespace WPFScheduler
                     throw new ArgumentNullException("Name your task");
                 DateTime deadline = Convert.ToDateTime(dateString, new CultureInfo("pl-PL"));
                 TaskToDo task = new TaskToDo(taskName.Text, taskType.SelectedItem.ToString(), deadline);
-                using (var context = new SchedulerDbContext())
-                {
-                    context.TasksToDo.Add(task);
-                    context.SaveChanges();
-                }
-                ApplicationDatabaseData.TasksToDo.Add(task);
+                ApplicationDatabaseData.TasksToDoAppData.Save(task);
                 this.Close();
             }
             catch (FormatException)
@@ -66,7 +64,7 @@ namespace WPFScheduler
         }
 
         /// <summary>
-        /// Funkcja wywoływana po kliknięciu przycisku "Cancel"
+        /// Metoda wywoływana po kliknięciu przycisku "Cancel"
         /// Zamyka okno dodawania zadań
         /// </summary>
         /// <param name="sender"></param>

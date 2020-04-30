@@ -19,14 +19,25 @@ namespace WPFScheduler
 {
     /// <summary>
     /// Logika interakcji dla klasy ChooseCity.xaml
+    /// W tym oknie użytkownik wybiera miasto, dla którego chce sprawdzić pogodę
     /// </summary>
     public partial class ChooseCity : Window
     {
+        /// <summary>
+        /// Konstruktor tworzący okno wyboru miasta
+        /// </summary>
         public ChooseCity()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda asynchroniczna wywoływana po kliknięciu przycisku "Next"
+        /// Pobiera informacje o pogodzie dla podanego miasta i tworzy
+        /// okno danych pogodowych wyświetlające dane otrzymane z API pogodowego
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void chooseCityButton_Click(object sender, RoutedEventArgs e)
         {
             try

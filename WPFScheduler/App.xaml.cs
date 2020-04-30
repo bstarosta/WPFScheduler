@@ -16,14 +16,13 @@ namespace WPFScheduler
     public partial class App : Application
     {
         /// <summary>
-        /// Metoda inicializująca bazę danych oraz klienta API pogodowego
+        /// Metoda inicializująca dane aplikacji oraz klienta API pogodowego
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            ApplicationDatabaseData.InitializeDatabase();
-            ApplicationDatabaseData.LoadDataFromDatabase();
+            ApplicationDatabaseData.InitializeData();
             WeatherAPIHelper.InitializeClient();
         }
     }

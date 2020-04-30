@@ -59,3 +59,4 @@ C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\AddEventWindow.g.c
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\AddEventWindow.baml
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\EventDetailsWindow.g.cs
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\EventDetailsWindow.baml
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WPFScheduler.xml
