@@ -1,0 +1,210 @@
+\hypertarget{class_w_p_f_scheduler_1_1_calendar_window}{}\doxysection{Dokumentacja klasy W\+P\+F\+Scheduler.\+Calendar\+Window}
+\label{class_w_p_f_scheduler_1_1_calendar_window}\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+
+
+Logika interakcji dla klasy Calendar\+Window.\+xaml. W tym oknie użytkownik ma dostęp do kalendarza, z którego może wybrać datę, aby przejrzeć przypisane do niej wydarzenia  
+
+
+Diagram dziedziczenia dla W\+P\+F\+Scheduler.\+Calendar\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_p_f_scheduler_1_1_calendar_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_a94beb5e3da138fdfbc549327f2c91dc5}{Calendar\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący okno kalendarza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_af0342a6807232f8affffc5285305a1d8}{back\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po wciśnięciu klawisza \char`\"{}\+Back\char`\"{} Zamyka okno kalendarza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_aa9bacd0472bd9f4e492f1d71599abf22}{select\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po wciśnięciu klawisza \char`\"{}\+Select\char`\"{} Otwiera okno przeglądu wydarzeń dla wybranej daty oraz zamyka okno kalendarza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_aae9228c394832dbc72fcc36fc9fc51e2}{event\+Calendar\+\_\+\+Selected\+Dates\+Changed}} (object sender, Selection\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza resetująca focus myszki po wyborze daty w kalendarzu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_aeb64c2c0ec05214862b835dff35e3ec3}{Calendar\+Day\+Button\+\_\+\+Loaded}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po załadowaniu przycisków reprezentujących dni w kalendarzu Wyróznia przyciski kalendarza, których daty znajdują się na liście dat przypisanych do wydarzeń \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_a7eb23158ecc3d9e317e6aa38221e23fc}{highlight\+Day}} (Calendar\+Day\+Button button, Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza, która zmienia tło przycisku kalendarza jeżeli przypisana do niego data znajduje sie na liście dat przypisanych do wydarzeń \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window_a1cb3974caf5a0d67f4f908eac77fb653}{calendar\+Button\+\_\+\+Data\+Context\+Changed}} (object sender, Dependency\+Property\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po zmianie miesięcy w kontrolce kalendarza. Aktualizuje przyciski kalendarza po zmianie miesiąca \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a25cec1583613f7c4b4f23af3e55d5799}\label{class_w_p_f_scheduler_1_1_calendar_window_a25cec1583613f7c4b4f23af3e55d5799}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a50bef96a181b68be61fb6685f3c8643c}\label{class_w_p_f_scheduler_1_1_calendar_window_a50bef96a181b68be61fb6685f3c8643c}} 
+void System.\+Windows.\+Markup.\+I\+Style\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a25cec1583613f7c4b4f23af3e55d5799}\label{class_w_p_f_scheduler_1_1_calendar_window_a25cec1583613f7c4b4f23af3e55d5799}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a50bef96a181b68be61fb6685f3c8643c}\label{class_w_p_f_scheduler_1_1_calendar_window_a50bef96a181b68be61fb6685f3c8643c}} 
+void System.\+Windows.\+Markup.\+I\+Style\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a6a925dc31895e27575f2844450c163e8}\label{class_w_p_f_scheduler_1_1_calendar_window_a6a925dc31895e27575f2844450c163e8}} 
+List$<$ Date\+Time $>$ {\bfseries event\+Dates}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_aa759431038f7ad61033aa9e80d5ee96d}\label{class_w_p_f_scheduler_1_1_calendar_window_aa759431038f7ad61033aa9e80d5ee96d}} 
+bool {\bfseries \+\_\+content\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Logika interakcji dla klasy Calendar\+Window.\+xaml. W tym oknie użytkownik ma dostęp do kalendarza, z którego może wybrać datę, aby przejrzeć przypisane do niej wydarzenia 
+
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_calendar_window}{Calendar\+Window}}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a94beb5e3da138fdfbc549327f2c91dc5}\label{class_w_p_f_scheduler_1_1_calendar_window_a94beb5e3da138fdfbc549327f2c91dc5}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!CalendarWindow@{CalendarWindow}}
+\index{CalendarWindow@{CalendarWindow}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{CalendarWindow()}{CalendarWindow()}}
+{\footnotesize\ttfamily W\+P\+F\+Scheduler.\+Calendar\+Window.\+Calendar\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor tworzący okno kalendarza 
+
+value$>$ Lista dat, do któtych przypisane są wydarzenia 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_af0342a6807232f8affffc5285305a1d8}\label{class_w_p_f_scheduler_1_1_calendar_window_af0342a6807232f8affffc5285305a1d8}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!backButton\_Click@{backButton\_Click}}
+\index{backButton\_Click@{backButton\_Click}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{backButton\_Click()}{backButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+back\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po wciśnięciu klawisza \char`\"{}\+Back\char`\"{} Zamyka okno kalendarza 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a1cb3974caf5a0d67f4f908eac77fb653}\label{class_w_p_f_scheduler_1_1_calendar_window_a1cb3974caf5a0d67f4f908eac77fb653}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!calendarButton\_DataContextChanged@{calendarButton\_DataContextChanged}}
+\index{calendarButton\_DataContextChanged@{calendarButton\_DataContextChanged}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{calendarButton\_DataContextChanged()}{calendarButton\_DataContextChanged()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+calendar\+Button\+\_\+\+Data\+Context\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Dependency\+Property\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po zmianie miesięcy w kontrolce kalendarza. Aktualizuje przyciski kalendarza po zmianie miesiąca 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_aeb64c2c0ec05214862b835dff35e3ec3}\label{class_w_p_f_scheduler_1_1_calendar_window_aeb64c2c0ec05214862b835dff35e3ec3}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!CalendarDayButton\_Loaded@{CalendarDayButton\_Loaded}}
+\index{CalendarDayButton\_Loaded@{CalendarDayButton\_Loaded}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{CalendarDayButton\_Loaded()}{CalendarDayButton\_Loaded()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+Calendar\+Day\+Button\+\_\+\+Loaded (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po załadowaniu przycisków reprezentujących dni w kalendarzu Wyróznia przyciski kalendarza, których daty znajdują się na liście dat przypisanych do wydarzeń 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_aae9228c394832dbc72fcc36fc9fc51e2}\label{class_w_p_f_scheduler_1_1_calendar_window_aae9228c394832dbc72fcc36fc9fc51e2}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!eventCalendar\_SelectedDatesChanged@{eventCalendar\_SelectedDatesChanged}}
+\index{eventCalendar\_SelectedDatesChanged@{eventCalendar\_SelectedDatesChanged}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{eventCalendar\_SelectedDatesChanged()}{eventCalendar\_SelectedDatesChanged()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+event\+Calendar\+\_\+\+Selected\+Dates\+Changed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Selection\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda pomocnicza resetująca focus myszki po wyborze daty w kalendarzu 
+
+Wprowadzona aby nie było konieczności dwukrotnego klikania przycisków po wyborze daty. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_a7eb23158ecc3d9e317e6aa38221e23fc}\label{class_w_p_f_scheduler_1_1_calendar_window_a7eb23158ecc3d9e317e6aa38221e23fc}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!highlightDay@{highlightDay}}
+\index{highlightDay@{highlightDay}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{highlightDay()}{highlightDay()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+highlight\+Day (\begin{DoxyParamCaption}\item[{Calendar\+Day\+Button}]{button,  }\item[{Date\+Time}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda pomocnicza, która zmienia tło przycisku kalendarza jeżeli przypisana do niego data znajduje sie na liście dat przypisanych do wydarzeń 
+
+
+\begin{DoxyParams}{Parametry}
+{\em button} & Przycisk kalendarza\\
+\hline
+{\em date} & Data przypisana do przycisku\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}\label{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}\label{class_w_p_f_scheduler_1_1_calendar_window_abeb9333ccb03307618809587b5f69fdd}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_calendar_window_aa9bacd0472bd9f4e492f1d71599abf22}\label{class_w_p_f_scheduler_1_1_calendar_window_aa9bacd0472bd9f4e492f1d71599abf22}} 
+\index{WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}!selectButton\_Click@{selectButton\_Click}}
+\index{selectButton\_Click@{selectButton\_Click}!WPFScheduler.CalendarWindow@{WPFScheduler.CalendarWindow}}
+\doxysubsubsection{\texorpdfstring{selectButton\_Click()}{selectButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Calendar\+Window.\+select\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po wciśnięciu klawisza \char`\"{}\+Select\char`\"{} Otwiera okno przeglądu wydarzeń dla wybranej daty oraz zamyka okno kalendarza 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/Calendar\+Window.\+xaml.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Calendar\+Window.\+g.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Calendar\+Window.\+g.\+i.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,175 @@
+\hypertarget{class_w_p_f_scheduler_1_1_add_event_window}{}\doxysection{Dokumentacja klasy W\+P\+F\+Scheduler.\+Add\+Event\+Window}
+\label{class_w_p_f_scheduler_1_1_add_event_window}\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+
+
+Logika interakcji dla klasy Add\+Event\+Window.\+xaml. W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty  
+
+
+Diagram dziedziczenia dla W\+P\+F\+Scheduler.\+Add\+Event\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_p_f_scheduler_1_1_add_event_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a32dc2058245186c1aa37f4ebd8e9f0d1}{Add\+Event\+Window}} (Date\+Time date)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący okno zawierające wydarzenia dla podanej daty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a5ba67d99899e14ad10d94e384118a360}{cancel\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Cancel\char`\"{} Zamyka okno dodawnia wydarzeń \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a41d96c488cdbf6fea502bfbc7a20074c}{save\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Save\char`\"{} Przetwarza wpisane przez użytkownika dane do postaci, w której można z nich utworzyć obiekt {\ttfamily Event} a następnie zapisuje utworzony obiekt do danych lokalnych oraz do bazy danych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a0fc649eb01e089de66a288db5e08f78a}{check\+For\+Empty\+Fields}} ()
+\begin{DoxyCompactList}\small\item\em Metoda pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola nie są puste. 
+\begin{DoxyExceptions}{Wyjątki}
+{\em Missing\+Field\+Exception} & Wyjątek rzucany w przypadku gdy wymagane pola są puste\\
+\hline
+\end{DoxyExceptions}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a70d8d2f6c146e767350b0de56dddc463}{Window\+\_\+\+Closing}} (object sender, System.\+Component\+Model.\+Cancel\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana podczas zamknięcia okna dodawania wydarzeń Otwiera poprzednie okno \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a0b197397a32b7aadfed6bc979d05f30c}\label{class_w_p_f_scheduler_1_1_add_event_window_a0b197397a32b7aadfed6bc979d05f30c}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a0b197397a32b7aadfed6bc979d05f30c}\label{class_w_p_f_scheduler_1_1_add_event_window_a0b197397a32b7aadfed6bc979d05f30c}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_af01bcb89843a56e6b23db3f9004da868}\label{class_w_p_f_scheduler_1_1_add_event_window_af01bcb89843a56e6b23db3f9004da868}} 
+List$<$ string $>$ \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_af01bcb89843a56e6b23db3f9004da868}{event\+Types}} =new List$<$string$>$() \{\char`\"{}Meeting\char`\"{}, \char`\"{}Party\char`\"{}, \char`\"{}Travel\char`\"{}, \char`\"{}Cultural\char`\"{}, \char`\"{}Business\char`\"{}, \char`\"{}Other\char`\"{} \}
+\begin{DoxyCompactList}\small\item\em Lista zawierająca typy wydarzeń\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a781bcacd5a2fa9d7a08322d32be864e0}\label{class_w_p_f_scheduler_1_1_add_event_window_a781bcacd5a2fa9d7a08322d32be864e0}} 
+Date\+Time \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window_a781bcacd5a2fa9d7a08322d32be864e0}{event\+Date}}
+\begin{DoxyCompactList}\small\item\em Data wydarzenia\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a55620e7f8291577a95e303dfa586049c}\label{class_w_p_f_scheduler_1_1_add_event_window_a55620e7f8291577a95e303dfa586049c}} 
+bool {\bfseries \+\_\+content\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Logika interakcji dla klasy Add\+Event\+Window.\+xaml. W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty 
+
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_event_window}{Add\+Event\+Window}}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a32dc2058245186c1aa37f4ebd8e9f0d1}\label{class_w_p_f_scheduler_1_1_add_event_window_a32dc2058245186c1aa37f4ebd8e9f0d1}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!AddEventWindow@{AddEventWindow}}
+\index{AddEventWindow@{AddEventWindow}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{AddEventWindow()}{AddEventWindow()}}
+{\footnotesize\ttfamily W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+Add\+Event\+Window (\begin{DoxyParamCaption}\item[{Date\+Time}]{date }\end{DoxyParamCaption})}
+
+
+
+Konstruktor tworzący okno zawierające wydarzenia dla podanej daty 
+
+
+\begin{DoxyParams}{Parametry}
+{\em date} & Data wybrana przez użytkownika w kalendarzu\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a5ba67d99899e14ad10d94e384118a360}\label{class_w_p_f_scheduler_1_1_add_event_window_a5ba67d99899e14ad10d94e384118a360}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!cancelButton\_Click@{cancelButton\_Click}}
+\index{cancelButton\_Click@{cancelButton\_Click}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{cancelButton\_Click()}{cancelButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+cancel\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Cancel\char`\"{} Zamyka okno dodawnia wydarzeń 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a0fc649eb01e089de66a288db5e08f78a}\label{class_w_p_f_scheduler_1_1_add_event_window_a0fc649eb01e089de66a288db5e08f78a}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!checkForEmptyFields@{checkForEmptyFields}}
+\index{checkForEmptyFields@{checkForEmptyFields}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{checkForEmptyFields()}{checkForEmptyFields()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+check\+For\+Empty\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda pomocnicza sprawdzająca czy wymagane do zapisania wydarzenia pola nie są puste. 
+\begin{DoxyExceptions}{Wyjątki}
+{\em Missing\+Field\+Exception} & Wyjątek rzucany w przypadku gdy wymagane pola są puste\\
+\hline
+\end{DoxyExceptions}
+
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}\label{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}\label{class_w_p_f_scheduler_1_1_add_event_window_a41838ebc5ed7c26bbdb8ccda4d4497ed}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a41d96c488cdbf6fea502bfbc7a20074c}\label{class_w_p_f_scheduler_1_1_add_event_window_a41d96c488cdbf6fea502bfbc7a20074c}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!saveButton\_Click@{saveButton\_Click}}
+\index{saveButton\_Click@{saveButton\_Click}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{saveButton\_Click()}{saveButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+save\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Save\char`\"{} Przetwarza wpisane przez użytkownika dane do postaci, w której można z nich utworzyć obiekt {\ttfamily Event} a następnie zapisuje utworzony obiekt do danych lokalnych oraz do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_event_window_a70d8d2f6c146e767350b0de56dddc463}\label{class_w_p_f_scheduler_1_1_add_event_window_a70d8d2f6c146e767350b0de56dddc463}} 
+\index{WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}!Window\_Closing@{Window\_Closing}}
+\index{Window\_Closing@{Window\_Closing}!WPFScheduler.AddEventWindow@{WPFScheduler.AddEventWindow}}
+\doxysubsubsection{\texorpdfstring{Window\_Closing()}{Window\_Closing()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Event\+Window.\+Window\+\_\+\+Closing (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{System.\+Component\+Model.\+Cancel\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana podczas zamknięcia okna dodawania wydarzeń Otwiera poprzednie okno 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/Add\+Event\+Window.\+xaml.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Add\+Event\+Window.\+g.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Add\+Event\+Window.\+g.\+i.\+cs\end{DoxyCompactItemize}

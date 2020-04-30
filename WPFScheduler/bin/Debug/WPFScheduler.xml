@@ -6,7 +6,7 @@
     <members>
         <member name="T:WPFScheduler.AddEventWindow">
             <summary>
-            Logika interakcji dla klasy AddEventWindow.xaml
+            Logika interakcji dla klasy AddEventWindow.xaml.
             W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty
             </summary>
             <summary>
@@ -27,7 +27,7 @@
         </member>
         <member name="M:WPFScheduler.AddEventWindow.cancelButton_Click(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
-            Funkcja wywoływana po kliknięciu przycisku "Cancel"
+            Metoda wywoływana po kliknięciu przycisku "Cancel"
             Zamyka okno dodawnia wydarzeń
             </summary>
             <param name="sender"></param>
@@ -65,7 +65,7 @@
         </member>
         <member name="T:WPFScheduler.AddTaskToDoWindow">
             <summary>
-            Logika interakcji dla klasy AddTaskToDoWindow.xaml
+            Logika interakcji dla klasy AddTaskToDoWindow.xaml.
             W tym oknie użytkownik może wpisać dane swojego zadania do wykonania
             oraz zapisać je na swojej liście
             </summary>
@@ -102,7 +102,7 @@
         </member>
         <member name="T:WPFScheduler.CalendarWindow">
             <summary>
-            Logika interakcji dla klasy CalendarWindow.xaml
+            Logika interakcji dla klasy CalendarWindow.xaml.
             W tym oknie użytkownik ma dostęp do kalendarza, z którego może
             wybrać datę, aby przejrzeć przypisane do niej wydarzenia
             </summary>
@@ -178,7 +178,7 @@
         </member>
         <member name="T:WPFScheduler.ChooseCity">
             <summary>
-            Logika interakcji dla klasy ChooseCity.xaml
+            Logika interakcji dla klasy ChooseCity.xaml.
             W tym oknie użytkownik wybiera miasto, dla którego chce sprawdzić pogodę
             </summary>
             <summary>
@@ -221,6 +221,45 @@
             i pobiera dane z bazy do aplikacji
             </summary>
         </member>
+        <member name="T:WPFScheduler.Database.Event">
+            <summary>
+            Klasa modelująca wydarzenie do zarejestrowania w kalendarzu. Zawiera nazwę wydarzenia,
+            jego typ, informację o ramach czasowych oraz opis. 
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.Event.#ctor">
+            <summary>
+            Konstruktor bezparametryczny
+            </summary>
+        </member>
+        <member name="M:WPFScheduler.Database.Event.#ctor(System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Konstruktor tworzący obiekty na podstawie danych podanych jako argumenty
+            </summary>
+            <param name="start">Czas startu wydarzenia</param>
+            <param name="end">Czas zakończenia wydarzenia</param>
+            <param name="name">Nazwa wydarzenia</param>
+            <param name="type">Typ wydarzenia</param>
+            <param name="description">Opis wydarzenia</param>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.EventID">
+            <value>Identyfikator wydarzenia generowany przez bazę danych</value>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.Start">
+            <value>Czas startu wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.End">
+            <value>Czas zakończenia wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.Name">
+            <value>Nazwa wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.Type">
+            <value>Typ wydarzenia</value>
+        </member>
+        <member name="P:WPFScheduler.Database.Event.Description">
+            <value>Opis wydarzenia</value>
+        </member>
         <member name="T:WPFScheduler.Database.EventsData">
             <summary>
             Klasa zarządzająca danymi o wydarzeniach. Zawiera metody pozwalające
@@ -235,17 +274,28 @@
             Metoda ładująca dane o wydarzeniach z bazy do aplikacji
             </summary>
         </member>
-        <member name="M:WPFScheduler.Database.EventsData.Save(WPFScheduler.Event)">
+        <member name="M:WPFScheduler.Database.EventsData.Save(WPFScheduler.Database.Event)">
             <summary>
             Metoda zapisująca dane o wydarzeniu do bazy danych oraz danych lokalnych
             </summary>
             <param name="ev">Wydarzenie do zapisania</param>
         </member>
-        <member name="M:WPFScheduler.Database.EventsData.Remove(WPFScheduler.Event)">
+        <member name="M:WPFScheduler.Database.EventsData.Remove(WPFScheduler.Database.Event)">
             <summary>
             Metoda usuwająca dane do wydarzeniu z bazy danych i danych lokalnych aplikacji
             </summary>
             <param name="ev">Wydarzenie do usunięcia</param>
+        </member>
+        <member name="T:WPFScheduler.Database.SchedulerDbContext">
+            <summary>
+            Klasa umożliwiająca korzystanie z połączonej z aplikacją bazy danych
+            </summary>
+        </member>
+        <member name="P:WPFScheduler.Database.SchedulerDbContext.Events">
+            <value>Reprezentuje tabelę "Events" w bazie danych</value>
+        </member>
+        <member name="P:WPFScheduler.Database.SchedulerDbContext.TasksToDo">
+            <value>Reprezentuje tabelę "TasksToDo" w bazie danych</value>
         </member>
         <member name="T:WPFScheduler.Database.TasksToDoData">
             <summary>
@@ -304,59 +354,9 @@
         <member name="P:WPFScheduler.Database.TaskToDo.Type">
             <value>Typ zadania</value>
         </member>
-        <member name="T:WPFScheduler.Event">
-            <summary>
-            Klasa modelująca wydarzenie do zarejestrowania w kalendarzu. Zawiera nazwę wydarzenia,
-            jego typ, informację o ramach czasowych oraz opis. 
-            </summary>
-        </member>
-        <member name="M:WPFScheduler.Event.#ctor">
-            <summary>
-            Konstruktor bezparametryczny
-            </summary>
-        </member>
-        <member name="M:WPFScheduler.Event.#ctor(System.DateTime,System.DateTime,System.String,System.String,System.String)">
-            <summary>
-            Konstruktor tworzący obiekty na podstawie danych podanych jako argumenty
-            </summary>
-            <param name="start">Czas startu wydarzenia</param>
-            <param name="end">Czas zakończenia wydarzenia</param>
-            <param name="name">Nazwa wydarzenia</param>
-            <param name="type">Typ wydarzenia</param>
-            <param name="description">Opis wydarzenia</param>
-        </member>
-        <member name="P:WPFScheduler.Event.EventID">
-            <value>Identyfikator wydarzenia generowany przez bazę danych</value>
-        </member>
-        <member name="P:WPFScheduler.Event.Start">
-            <value>Czas startu wydarzenia</value>
-        </member>
-        <member name="P:WPFScheduler.Event.End">
-            <value>Czas zakończenia wydarzenia</value>
-        </member>
-        <member name="P:WPFScheduler.Event.Name">
-            <value>Nazwa wydarzenia</value>
-        </member>
-        <member name="P:WPFScheduler.Event.Type">
-            <value>Typ wydarzenia</value>
-        </member>
-        <member name="P:WPFScheduler.Event.Description">
-            <value>Opis wydarzenia</value>
-        </member>
-        <member name="T:WPFScheduler.SchedulerDbContext">
-            <summary>
-            Klasa umożliwiająca korzystanie z połączonej z aplikacją bazy danych
-            </summary>
-        </member>
-        <member name="P:WPFScheduler.SchedulerDbContext.Events">
-            <value>Reprezentuje tabelę "Events" w bazie danych</value>
-        </member>
-        <member name="P:WPFScheduler.SchedulerDbContext.TasksToDo">
-            <value>Reprezentuje tabelę "TasksToDo" w bazie danych</value>
-        </member>
         <member name="T:WPFScheduler.DateViewWindow">
             <summary>
-            Logika interakcji dla klasy DateViewWindow.xaml
+            Logika interakcji dla klasy DateViewWindow.xaml.
             W tym oknie użytkownik może zarządzać listą wydarzeń dla wybranej daty
             </summary>
             <summary>
@@ -414,7 +414,7 @@
         </member>
         <member name="T:WPFScheduler.EventDetailsWindow">
             <summary>
-            Logika interakcji dla klasy EventDetailsWindow.xaml
+            Logika interakcji dla klasy EventDetailsWindow.xaml.
             W tym oknie użytkownik ma dostęp do szczegółowych informacji
             o wybranym wydarzeniu
             </summary>
@@ -422,7 +422,7 @@
             EventDetailsWindow
             </summary>
         </member>
-        <member name="M:WPFScheduler.EventDetailsWindow.#ctor(WPFScheduler.Event)">
+        <member name="M:WPFScheduler.EventDetailsWindow.#ctor(WPFScheduler.Database.Event)">
             <summary>
             Konstruktor tworzący okno szczegółowych informacji o wydarzeniu
             wybranym z listy
@@ -462,7 +462,7 @@
         </member>
         <member name="T:WPFScheduler.ToDoListWindow">
             <summary>
-            Logika interakcji dla klasy ToDoListWindow.xaml
+            Logika interakcji dla klasy ToDoListWindow.xaml.
             W tym oknie użytkownik może zarządzać listą zadań do wykonania
             </summary>
             <summary>
@@ -505,7 +505,7 @@
         </member>
         <member name="T:WPFScheduler.WeatherWindow">
             <summary>
-            Logika interakcji dla klasy WeatherWindow.xaml
+            Logika interakcji dla klasy WeatherWindow.xaml.
             W tym oknie wyświetlane są informaje o pogodzie w wybranym mieście
             </summary>
             <summary>
@@ -566,7 +566,7 @@
         </member>
         <member name="T:WPFScheduler.MainWindow">
             <summary>
-            Logika interakcji dla klasy MainWindow.xaml
+            Logika interakcji dla klasy MainWindow.xaml.
             Okno startowe aplikacji. Pozwala użytkownikowi przejść
             do kalendarza wydarzeń, listy zadań do wykonania lub
             informacji pogodowych

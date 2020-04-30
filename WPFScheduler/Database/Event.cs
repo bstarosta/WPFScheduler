@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFScheduler
+namespace WPFScheduler.Database
 {
     /// <summary>
     /// Klasa modelująca wydarzenie do zarejestrowania w kalendarzu. Zawiera nazwę wydarzenia,

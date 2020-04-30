@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WPFScheduler.Database;
 
-namespace WPFScheduler
+namespace WPFScheduler.Database
 {
     /// <summary>
     /// Klasa umożliwiająca korzystanie z połączonej z aplikacją bazy danych

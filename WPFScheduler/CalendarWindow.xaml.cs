@@ -17,7 +17,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy CalendarWindow.xaml
+    /// Logika interakcji dla klasy CalendarWindow.xaml.
     /// W tym oknie użytkownik ma dostęp do kalendarza, z którego może
     /// wybrać datę, aby przejrzeć przypisane do niej wydarzenia
     /// </summary>

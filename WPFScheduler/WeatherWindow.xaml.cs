@@ -16,7 +16,7 @@ using WeatherAPILibrary;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy WeatherWindow.xaml
+    /// Logika interakcji dla klasy WeatherWindow.xaml.
     /// W tym oknie wyświetlane są informaje o pogodzie w wybranym mieście
     /// </summary>
     public partial class WeatherWindow : Window

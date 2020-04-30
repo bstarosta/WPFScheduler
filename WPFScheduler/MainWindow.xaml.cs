@@ -18,7 +18,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy MainWindow.xaml.
     /// Okno startowe aplikacji. Pozwala użytkownikowi przejść
     /// do kalendarza wydarzeń, listy zadań do wykonania lub
     /// informacji pogodowych

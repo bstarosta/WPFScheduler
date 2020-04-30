@@ -17,7 +17,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy AddEventWindow.xaml
+    /// Logika interakcji dla klasy AddEventWindow.xaml.
     /// W tym oknie użytkownik może dodać wydarzenie dla wybranej w oknie kalendarza daty
     /// </summary>
     public partial class AddEventWindow : Window
@@ -40,7 +40,7 @@ namespace WPFScheduler
         private DateTime eventDate;
 
         /// <summary>
-        /// Funkcja wywoływana po kliknięciu przycisku "Cancel"
+        /// Metoda wywoływana po kliknięciu przycisku "Cancel"
         /// Zamyka okno dodawnia wydarzeń
         /// </summary>
         /// <param name="sender"></param>

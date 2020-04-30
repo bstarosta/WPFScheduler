@@ -1,0 +1,126 @@
+\hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window}{}\doxysection{Dokumentacja klasy W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window}
+\label{class_w_p_f_scheduler_1_1_add_task_to_do_window}\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+
+
+Logika interakcji dla klasy Add\+Task\+To\+Do\+Window.\+xaml. W tym oknie użytkownik może wpisać dane swojego zadania do wykonania oraz zapisać je na swojej liście  
+
+
+Diagram dziedziczenia dla W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_p_f_scheduler_1_1_add_task_to_do_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window_a72f580a211ff59c9db7ea57ffb0f7c21}{Add\+Task\+To\+Do\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący okno dodawana zadań do wykonania \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window_a12c74575705bc27a6b0f5f8ef0b1855d}{save\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wykonywana po kliknięciu przycisku \char`\"{}\+Save\char`\"{}. Przetwarza wpisane przez użytkownika dane do postaci, w której można z nich utworzyć obiekt {\ttfamily Task\+To\+Do}, a następnie zapisuje utworzony obiekt do danych lokalnych oraz do bazy danych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window_a46ef9111e1260c8c88133274957f6bca}{cancel\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Cancel\char`\"{} Zamyka okno dodawania zadań \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a0778d4ce695b8053beca4a55d49d0a71}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a0778d4ce695b8053beca4a55d49d0a71}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a0778d4ce695b8053beca4a55d49d0a71}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a0778d4ce695b8053beca4a55d49d0a71}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_ae3f412054ec77bc969c44ec37d9b86d9}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_ae3f412054ec77bc969c44ec37d9b86d9}} 
+List$<$ string $>$ {\bfseries types} = new List$<$string$>$ \{ \char`\"{}Home\char`\"{}, \char`\"{}School\char`\"{}, \char`\"{}Job\char`\"{}, \char`\"{}Other\char`\"{} \}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a4e21ae2718d8c7543f2bef2c86817cc8}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a4e21ae2718d8c7543f2bef2c86817cc8}} 
+bool {\bfseries \+\_\+content\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Logika interakcji dla klasy Add\+Task\+To\+Do\+Window.\+xaml. W tym oknie użytkownik może wpisać dane swojego zadania do wykonania oraz zapisać je na swojej liście 
+
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_add_task_to_do_window}{Add\+Task\+To\+Do\+Window}}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a72f580a211ff59c9db7ea57ffb0f7c21}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a72f580a211ff59c9db7ea57ffb0f7c21}} 
+\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}!AddTaskToDoWindow@{AddTaskToDoWindow}}
+\index{AddTaskToDoWindow@{AddTaskToDoWindow}!WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+\doxysubsubsection{\texorpdfstring{AddTaskToDoWindow()}{AddTaskToDoWindow()}}
+{\footnotesize\ttfamily W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window.\+Add\+Task\+To\+Do\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor tworzący okno dodawana zadań do wykonania 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a46ef9111e1260c8c88133274957f6bca}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a46ef9111e1260c8c88133274957f6bca}} 
+\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}!cancelButton\_Click@{cancelButton\_Click}}
+\index{cancelButton\_Click@{cancelButton\_Click}!WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+\doxysubsubsection{\texorpdfstring{cancelButton\_Click()}{cancelButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window.\+cancel\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Cancel\char`\"{} Zamyka okno dodawania zadań 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}} 
+\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_af55e46b96223e7169a5d185c882d05e9}} 
+\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_add_task_to_do_window_a12c74575705bc27a6b0f5f8ef0b1855d}\label{class_w_p_f_scheduler_1_1_add_task_to_do_window_a12c74575705bc27a6b0f5f8ef0b1855d}} 
+\index{WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}!saveButton\_Click@{saveButton\_Click}}
+\index{saveButton\_Click@{saveButton\_Click}!WPFScheduler.AddTaskToDoWindow@{WPFScheduler.AddTaskToDoWindow}}
+\doxysubsubsection{\texorpdfstring{saveButton\_Click()}{saveButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Add\+Task\+To\+Do\+Window.\+save\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wykonywana po kliknięciu przycisku \char`\"{}\+Save\char`\"{}. Przetwarza wpisane przez użytkownika dane do postaci, w której można z nich utworzyć obiekt {\ttfamily Task\+To\+Do}, a następnie zapisuje utworzony obiekt do danych lokalnych oraz do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/Add\+Task\+To\+Do\+Window.\+xaml.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Add\+Task\+To\+Do\+Window.\+g.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Add\+Task\+To\+Do\+Window.\+g.\+i.\+cs\end{DoxyCompactItemize}

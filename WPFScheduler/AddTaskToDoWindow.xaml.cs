@@ -17,7 +17,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy AddTaskToDoWindow.xaml
+    /// Logika interakcji dla klasy AddTaskToDoWindow.xaml.
     /// W tym oknie użytkownik może wpisać dane swojego zadania do wykonania
     /// oraz zapisać je na swojej liście
     /// </summary>

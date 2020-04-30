@@ -9,3 +9,4 @@ C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILib
 C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.csproj.CopyComplete
 C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.dll
 C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\obj\Debug\WeatherAPILibrary.pdb
+C:\Users\Joanna\Documents\WPFScheduler\WeatherAPILibrary\bin\Debug\WeatherAPILibrary.xml

@@ -60,3 +60,4 @@ C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\AddEventWindow.bam
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\EventDetailsWindow.g.cs
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\obj\Debug\EventDetailsWindow.baml
 C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WPFScheduler.xml
+C:\Users\Joanna\Documents\WPFScheduler\WPFScheduler\bin\Debug\WeatherAPILibrary.xml

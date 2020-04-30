@@ -1,0 +1,172 @@
+\hypertarget{class_w_p_f_scheduler_1_1_date_view_window}{}\doxysection{Dokumentacja klasy W\+P\+F\+Scheduler.\+Date\+View\+Window}
+\label{class_w_p_f_scheduler_1_1_date_view_window}\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+
+
+Logika interakcji dla klasy Date\+View\+Window.\+xaml. W tym oknie użytkownik może zarządzać listą wydarzeń dla wybranej daty  
+
+
+Diagram dziedziczenia dla W\+P\+F\+Scheduler.\+Date\+View\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_p_f_scheduler_1_1_date_view_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_ad19a3d63c383f781ab57d7c1707fcce5}{Date\+View\+Window}} (Date\+Time selected\+Date)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący okno przeglądu wydarzeń dla danej daty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Initialize\+Component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a3f2ff97770751eb6c7785e37c1da4253}{back\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po wciśnięciu przycisku \char`\"{}\+Back\char`\"{} Zamyka okno przeglądu wydarzeń i otwiera okno kalendarza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a8cd27bcc002283ace72b08a6cfcceab9}{details\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Details\char`\"{} Otwiera okno szczegółowych informacji o wydarzeniu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a2cac998370f84a2dbc42905b4aa2e0c3}{remove\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Remove\char`\"{} Usuwa wybrane wydarzenie z listy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a63ca99f25fd97bdb4b5445110e524723}{add\+Button\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Add\char`\"{} Otwiera okno dodawania wydarzeń oraz zamyka okno przeglądu wydarzeń \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_aefc3554964eaa22c1bb36f309f59083f}\label{class_w_p_f_scheduler_1_1_date_view_window_aefc3554964eaa22c1bb36f309f59083f}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_aefc3554964eaa22c1bb36f309f59083f}\label{class_w_p_f_scheduler_1_1_date_view_window_aefc3554964eaa22c1bb36f309f59083f}} 
+void System.\+Windows.\+Markup.\+I\+Component\+Connector. {\bfseries Connect} (int connection\+Id, object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a7daf55e3eea369ab2dd3bd01a67655e5}\label{class_w_p_f_scheduler_1_1_date_view_window_a7daf55e3eea369ab2dd3bd01a67655e5}} 
+List$<$ \mbox{\hyperlink{class_w_p_f_scheduler_1_1_database_1_1_event}{Event}} $>$ \mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window_a7daf55e3eea369ab2dd3bd01a67655e5}{events}}
+\begin{DoxyCompactList}\small\item\em value$>$ Data dla jakiej wyświetlana jest lista wydarzeń \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a94af2bc2719742fe935330872fff046f}\label{class_w_p_f_scheduler_1_1_date_view_window_a94af2bc2719742fe935330872fff046f}} 
+Date\+Time {\bfseries date}
+\item 
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_af00ce014001a165d7991f0f78308a2cd}\label{class_w_p_f_scheduler_1_1_date_view_window_af00ce014001a165d7991f0f78308a2cd}} 
+bool {\bfseries \+\_\+content\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Logika interakcji dla klasy Date\+View\+Window.\+xaml. W tym oknie użytkownik może zarządzać listą wydarzeń dla wybranej daty 
+
+\mbox{\hyperlink{class_w_p_f_scheduler_1_1_date_view_window}{Date\+View\+Window}}
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_ad19a3d63c383f781ab57d7c1707fcce5}\label{class_w_p_f_scheduler_1_1_date_view_window_ad19a3d63c383f781ab57d7c1707fcce5}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!DateViewWindow@{DateViewWindow}}
+\index{DateViewWindow@{DateViewWindow}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{DateViewWindow()}{DateViewWindow()}}
+{\footnotesize\ttfamily W\+P\+F\+Scheduler.\+Date\+View\+Window.\+Date\+View\+Window (\begin{DoxyParamCaption}\item[{Date\+Time}]{selected\+Date }\end{DoxyParamCaption})}
+
+
+
+Konstruktor tworzący okno przeglądu wydarzeń dla danej daty 
+
+
+\begin{DoxyParams}{Parametry}
+{\em selected\+Date} & Dara wybrana w kalendarzu\\
+\hline
+\end{DoxyParams}
+value$>$ Lista wydarzeń przypisanych do danej daty 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a63ca99f25fd97bdb4b5445110e524723}\label{class_w_p_f_scheduler_1_1_date_view_window_a63ca99f25fd97bdb4b5445110e524723}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!addButton\_Click@{addButton\_Click}}
+\index{addButton\_Click@{addButton\_Click}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{addButton\_Click()}{addButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+add\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Add\char`\"{} Otwiera okno dodawania wydarzeń oraz zamyka okno przeglądu wydarzeń 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a3f2ff97770751eb6c7785e37c1da4253}\label{class_w_p_f_scheduler_1_1_date_view_window_a3f2ff97770751eb6c7785e37c1da4253}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!backButton\_Click@{backButton\_Click}}
+\index{backButton\_Click@{backButton\_Click}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{backButton\_Click()}{backButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+back\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po wciśnięciu przycisku \char`\"{}\+Back\char`\"{} Zamyka okno przeglądu wydarzeń i otwiera okno kalendarza 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a8cd27bcc002283ace72b08a6cfcceab9}\label{class_w_p_f_scheduler_1_1_date_view_window_a8cd27bcc002283ace72b08a6cfcceab9}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!detailsButton\_Click@{detailsButton\_Click}}
+\index{detailsButton\_Click@{detailsButton\_Click}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{detailsButton\_Click()}{detailsButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+details\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Details\char`\"{} Otwiera okno szczegółowych informacji o wydarzeniu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}\label{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}\label{class_w_p_f_scheduler_1_1_date_view_window_a9b15e27c15c9de5dfb1bb27c709cd07b}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize\+Component 
+
+\mbox{\Hypertarget{class_w_p_f_scheduler_1_1_date_view_window_a2cac998370f84a2dbc42905b4aa2e0c3}\label{class_w_p_f_scheduler_1_1_date_view_window_a2cac998370f84a2dbc42905b4aa2e0c3}} 
+\index{WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}!removeButton\_Click@{removeButton\_Click}}
+\index{removeButton\_Click@{removeButton\_Click}!WPFScheduler.DateViewWindow@{WPFScheduler.DateViewWindow}}
+\doxysubsubsection{\texorpdfstring{removeButton\_Click()}{removeButton\_Click()}}
+{\footnotesize\ttfamily void W\+P\+F\+Scheduler.\+Date\+View\+Window.\+remove\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wywoływana po kliknięciu przycisku \char`\"{}\+Remove\char`\"{} Usuwa wybrane wydarzenie z listy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/Date\+View\+Window.\+xaml.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Date\+View\+Window.\+g.\+cs\item 
+C\+:/\+Users/\+Joanna/\+Documents/\+W\+P\+F\+Scheduler/\+W\+P\+F\+Scheduler/obj/\+Debug/Date\+View\+Window.\+g.\+i.\+cs\end{DoxyCompactItemize}

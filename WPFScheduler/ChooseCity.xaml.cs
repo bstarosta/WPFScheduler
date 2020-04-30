@@ -18,7 +18,7 @@ using WeatherAPILibrary;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy ChooseCity.xaml
+    /// Logika interakcji dla klasy ChooseCity.xaml.
     /// W tym oknie użytkownik wybiera miasto, dla którego chce sprawdzić pogodę
     /// </summary>
     public partial class ChooseCity : Window

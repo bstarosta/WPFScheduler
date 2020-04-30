@@ -11,11 +11,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFScheduler.Database;
 
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy EventDetailsWindow.xaml
+    /// Logika interakcji dla klasy EventDetailsWindow.xaml.
     /// W tym oknie użytkownik ma dostęp do szczegółowych informacji
     /// o wybranym wydarzeniu
     /// </summary>

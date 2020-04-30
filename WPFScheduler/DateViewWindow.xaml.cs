@@ -16,7 +16,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy DateViewWindow.xaml
+    /// Logika interakcji dla klasy DateViewWindow.xaml.
     /// W tym oknie użytkownik może zarządzać listą wydarzeń dla wybranej daty
     /// </summary>
     public partial class DateViewWindow : Window

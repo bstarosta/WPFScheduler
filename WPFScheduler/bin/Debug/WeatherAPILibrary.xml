@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeatherAPILibrary</name>
+    </assembly>
+    <members>
+        <member name="T:WeatherAPILibrary.WeatherAPIHelper">
+            <summary>
+            Klasa wspomagająca obsługę API pogodowego. Zawera statyczny obiekt <c>HttpClient</c> oraz
+            metodę inicializującą ten obiekt
+            </summary>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIHelper.WeatherAPIClient">
+            <value>Obiekt odpowiedzialny za komunikacje z API </value>
+        </member>
+        <member name="M:WeatherAPILibrary.WeatherAPIHelper.InitializeClient">
+            <summary>
+            Metoda statyczna inicjalizująca klienta http
+            </summary>
+        </member>
+        <member name="T:WeatherAPILibrary.WeatherAPIResponse">
+            <summary>
+            Klasa modelująca odpowiedź API pogodowego
+            </summary>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.Weather">
+            <value> Przechowuje identyfikator obrazka odzwieriedlającego stan pogodowy</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.Main">
+            <value> Obiekt przechowujący szczegółowe informacje o pogodzie</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.Name">
+            <value> Nazwa miasta </value>
+        </member>
+        <member name="T:WeatherAPILibrary.WeatherAPIResponse.GeneralInfo">
+            <summary>
+            Klasa zawierająca informacje przydatne przy wizualizacji stanu pogodowego
+            </summary>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.GeneralInfo.Icon">
+            <value> Identyfikator obrazka odzwierciedlającego stan pogodowy </value>
+        </member>
+        <member name="T:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo">
+            <summary>
+            Klasa zawierająca szczegółowe informaje o pogodzie
+            </summary>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo.Temp">
+            <value>Temperatura powietrza w stopniach Celsjusza</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo.Pressure">
+            <value>Ciśnienie atmosferyczne w hPa</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo.Humidity">
+            <value>Wilgotność powietrza w %</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo.Temp_min">
+            <value>Minimalna temperatura w stopniach Celsjusza</value>
+        </member>
+        <member name="P:WeatherAPILibrary.WeatherAPIResponse.WeatherInfo.Temp_max">
+            <value>Maksymalna temperatura w stopniach Celsjusza</value>
+        </member>
+        <member name="T:WeatherAPILibrary.WeatherProcessor">
+            <summary>
+            Klasa odpowiedzialna za pobieranie danych z API pogodowego
+            </summary>
+        </member>
+        <member name="M:WeatherAPILibrary.WeatherProcessor.GetWeather(System.String)">
+            <summary>
+            Metoda asynchroniczna pobierająca odpowiedź z API pogodowego
+            </summary>
+            <param name="cityName">Miasto, w którym ma zostać sprawdzona pogoda</param>
+            <returns>Obiekt zawierający dane o pogodzie w wybranym mieście</returns>
+            <exception cref="T:System.Exception">Wyjątek występujący w wypadku nieudanej komunikacji z API</exception>
+        </member>
+    </members>
+</doc>

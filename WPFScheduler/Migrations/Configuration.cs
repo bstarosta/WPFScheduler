@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WPFScheduler.SchedulerDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WPFScheduler.Database.SchedulerDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WPFScheduler.SchedulerDbContext context)
+        protected override void Seed(WPFScheduler.Database.SchedulerDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

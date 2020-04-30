@@ -16,7 +16,7 @@ using WPFScheduler.Database;
 namespace WPFScheduler
 {
     /// <summary>
-    /// Logika interakcji dla klasy ToDoListWindow.xaml
+    /// Logika interakcji dla klasy ToDoListWindow.xaml.
     /// W tym oknie użytkownik może zarządzać listą zadań do wykonania
     /// </summary>
     public partial class ToDoListWindow : Window
